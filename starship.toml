@@ -1,0 +1,32 @@
+# Don't print a new line at the start of the prompt
+add_newline = true 
+
+# Make prompt a single line instead of two lines
+[line_break]
+disabled = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = false 
+
+[hostname]
+ssh_only = false
+disabled = false 
+style = "bold underline #9e1b5e"
+
+[cmd_duration]
+min_time = 0
+show_miliseconds = true
+disabled = false
+style = "bold #499abf"
+format = "took [$duration]($style) "
+
+[memory_usage]
+disabled = false
+treshhold = 5 
+symbol = "🐏"
+style = "bold dimmed white"
+format = "via $symbol [${ram}]($style) "
+
+[time]
+disabled = false
