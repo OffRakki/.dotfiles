@@ -16,14 +16,14 @@ style = "bold underline #9e1b5e"
 
 [cmd_duration]
 min_time = 0
-show_miliseconds = true
+show_milliseconds = true
 disabled = false
 style = "bold #499abf"
 format = "took [$duration]($style) "
 
 [memory_usage]
-disabled = false
-treshhold = 5 
+disabled = true
+threshold = 5 
 symbol = "🐏"
 style = "bold dimmed white"
 format = "via $symbol [${ram}]($style) "

@@ -30,13 +30,13 @@ configuration {
 	alternate-urgent-foreground: @foreground;
 	selected-active-background: #7836b5;
 	selected-active-foreground: @foreground;
-	selected-normal-background: rgb(99, 65, 122);
-	selected-normal-foreground: #0c0816;
+	selected-normal-background: rgb(122, 44, 61);
+	selected-normal-foreground: #2E2A38;
 	selected-urgent-background: #9D596B;
 	selected-urgent-foreground: @foreground;
-	background-color: #0c0816;
+	background-color: #2E2A38;
 	background: #2e2a38;
-	foreground: #bdb1b7;
+	foreground: #149BDA;
 	spacing: 0;
 }
 
