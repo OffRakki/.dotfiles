@@ -2,27 +2,27 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Start Flavours
-## Base16 Unikitty Dark
-# Author: Josh W Lewis (@joshwlewis)
+## Base16 Material Darker
+# Author: Nate Peterson
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #2e2a31
-set $base01 #4a464d
-set $base02 #666369
-set $base03 #838085
-set $base04 #9f9da2
-set $base05 #bcbabe
-set $base06 #d8d7da
-set $base07 #f5f4f7
-set $base08 #d8137f
-set $base09 #d65407
-set $base0A #dc8a0e
-set $base0B #17ad98
-set $base0C #149bda
-set $base0D #796af5
-set $base0E #bb60ea
-set $base0F #c720ca
+set $base00 #212121
+set $base01 #303030
+set $base02 #353535
+set $base03 #4A4A4A
+set $base04 #B2CCD6
+set $base05 #EEFFFF
+set $base06 #EEFFFF
+set $base07 #FFFFFF
+set $base08 #F07178
+set $base09 #F78C6C
+set $base0A #FFCB6B
+set $base0B #C3E88D
+set $base0C #89DDFF
+set $base0D #82AAFF
+set $base0E #C792EA
+set $base0F #FF5370
 # End Flavours
 
 # __________________________________________________________________________________________
@@ -41,16 +41,16 @@ set $volume pactl set-sink-volume @DEFAULT_SINK@
 set $volMute pactl set-sink-mute @DEFAULT_SINK@ toggle
 set $micMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
 set $resolution xrandr --output HDMI-1 --mode "1920x1080"
-set $keyboard sleep 4 sudo setxkbmap -layout us -variant intl
+set $keyboard exec_always --no-startup-id setxkbmap -layout us -variant intl -model pc105
 set $ssh sudo systemctl start sshd
-set $osusync $HOME/scripts/rsync/osusync.sh
+set $progsync $HOME/scripts/programbkp/programsync.sh
 # __________________________________________________________________________________________
 
 # lolcard
 #bindsym $alt+c exec sleep 0.5 && $lolcard
 
-# osu! sync
-exec --no-startup-id $osusync
+# programing sync
+exec --no-startup-id $progsync
 
 # Start ssh
 exec --no-startup-id $ssh
@@ -70,15 +70,15 @@ bindsym Ctrl+Print --release exec --no-startup-id escrotum -C
 bindsym Shift+Print --release exec --no-startup-id escrotum -s '~/Pictures/prints/%Y-%m-%d_$wx$h.png'
 
 # mpv volume control
-bindsym $mod+Shift+equal exec $mpvControl +5%
-bindsym $mod+Shift+minus exec $mpvControl -5%
+bindsym $mod+Shift+equal exec $mpvControl +2%
+bindsym $mod+Shift+minus exec $mpvControl -2%
 
 # Backup
 exec_always --no-startup-id $backup 
 
 # volume geral
-bindsym XF86AudioRaiseVolume exec $volume +5%
-bindsym XF86AudioLowerVolume exec $volume -5%
+bindsym XF86AudioRaiseVolume exec $volume +2%
+bindsym XF86AudioLowerVolume exec $volume -2%
 bindsym XF86AudioMute exec $volMute
 bindsym Ctrl+m exec $micMute
 
@@ -101,14 +101,14 @@ bindsym $mod+Ctrl+k exec $kaomoji
 exec_always killall picom; picom
 
 # Resolution
-exec_always $resolution --primary --pos 1920x130
-exec_always $resolution
+exec $resolution --primary --pos 1920x130
+exec $resolution
 
 # Wallpaper
-exec --no-startup-id $wallpaper 
+exec $wallpaper 
 
 # Layout Teclado
-exec_always --no-startup-id $keyboard
+exec_always $keyboard
 
 # file manager
 bindsym $mod+Shift+e exec nautilus
@@ -166,7 +166,7 @@ bindsym $mod+F5 exec terminal -e 'mocp'
 #bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
-# focus_follows_mouse no
+#focus_follows_mouse no
 
 # change focus
 bindsym $mod+h focus left
@@ -312,6 +312,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [class="NetworkManager"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
