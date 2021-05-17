@@ -47,7 +47,7 @@ set $progsync $HOME/.scripts/programbkp/programsync.sh
 # __________________________________________________________________________________________
 
 # plastic memories
-bindsym Ctrl+s exec sleep 0.3 && xdotool type "i hope one day you'll be reunited with the one you cherish."
+bindsym Ctrl+p exec sleep 0.3 && xdotool type "i hope one day you'll be reunited with the one you cherish."
 
 # lolcard
 #bindsym $alt+c exec sleep 0.5 && $lolcard
