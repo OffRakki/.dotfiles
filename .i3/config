@@ -27,24 +27,27 @@ set $base0F #FF5370
 
 # __________________________________________________________________________________________
 
-set $lolcard $HOME/scripts/lol/card.sh
-set $calc $HOME/scripts/rofi/calc.sh
+set $lolcard $HOME/.scripts/lol/card.sh
+set $calc $HOME/.scripts/rofi/calc.sh
 set $polybar $HOME/.config/polybar/launch.sh
-set $backup $HOME/scripts/backup/backup.sh
-set $rofi $HOME/scripts/rofi/run.sh
-set $wallpaper $HOME/scripts/wallpaper/feh.sh
-set $kdeconnect $HOME/scripts/kdeconnect/kdeconnect.sh
-set $kaomoji $HOME/scripts/rofi/kaomoji/kaomoji.sh
+set $backup $HOME/.scripts/backup/backup.sh
+set $rofi $HOME/.scripts/rofi/run.sh
+set $wallpaper $HOME/.scripts/wallpaper/feh.sh
+set $kdeconnect $HOME/.scripts/kdeconnect/kdeconnect.sh
+set $kaomoji $HOME/.scripts/rofi/kaomoji/kaomoji.sh
 set $onedrive rclone --vfs-cache-mode writes mount onedrive: ~/onedrive
-set $mpvControl pactl set-sink-input-volume $(~/scripts/mpv/mpvvolumecontrol.sh)
+set $mpvControl pactl set-sink-input-volume $(~/.scripts/mpv/mpvvolumecontrol.sh)
 set $volume pactl set-sink-volume @DEFAULT_SINK@
 set $volMute pactl set-sink-mute @DEFAULT_SINK@ toggle
 set $micMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
 set $resolution xrandr --output HDMI-1 --mode "1920x1080"
 set $keyboard exec_always --no-startup-id setxkbmap -layout us -variant intl -model pc105
 set $ssh sudo systemctl start sshd
-set $progsync $HOME/scripts/programbkp/programsync.sh
+set $progsync $HOME/.scripts/programbkp/programsync.sh
 # __________________________________________________________________________________________
+
+# plastic memories
+bindsym Ctrl+s exec sleep 0.3 && xdotool type "i hope one day you'll be reunited with the one you cherish."
 
 # lolcard
 #bindsym $alt+c exec sleep 0.5 && $lolcard
@@ -223,11 +226,11 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+a focus parent
 
 # move the currently focused window to the scratchpad
-#bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-#bindsym $mod+minus scratchpad show
+bindsym $mod+equal scratchpad show
 
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next

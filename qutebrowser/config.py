@@ -139,8 +139,8 @@ config.set('content.media.audio_capture', True, 'https://discord.com')
 #   - ask
 
 # Bindings for normal mode
-config.bind('e', 'hint links spawn ~/scripts/qutebrowser/mpv.sh {hint-url}')
-config.bind('E', 'spawn ~/scripts/qutebrowser/mpv.sh {url}')
-config.bind('z', 'hint links spawn ~/scripts/qutebrowser/download.sh {hint-url}')
-config.bind('X', 'hint links spawn ~/scripts/qutebrowser/audio.sh {hint-url}')
+config.bind('e', 'hint links spawn ~/.scripts/qutebrowser/mpv.sh {hint-url}')
+config.bind('E', 'spawn ~/.scripts/qutebrowser/mpv.sh {url}')
+config.bind('z', 'hint links spawn ~/.scripts/qutebrowser/download.sh {hint-url}')
+config.bind('X', 'hint links spawn ~/.scripts/qutebrowser/audio.sh {hint-url}')
 config.bind('xb', 'config-cycle statusbar.show always never')

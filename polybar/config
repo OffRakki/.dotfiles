@@ -137,18 +137,18 @@ cursor-scroll = ns-resize
 
 [module/eth]
 type = custom/script
-exec = ~/scripts/eth/eth.sh
+exec = ~/.scripts/eth/eth.sh
 #exec-if = pgrep -x ethminer
 interval = 30
 
 [module/kdeconnect]  
 type = custom/script  
-exec = ~/scripts/kdeconnect/polybar-kdeconnect.sh -d  
+exec = ~/.scripts/kdeconnect/polybar-kdeconnect.sh -d  
 tail = true
 
 [module/pacaur]
 type = custom/script
-exec = ~/scripts/pacaur/updates-pacman-aur.sh
+exec = ~/.scripts/pacaur/updates-pacman-aur.sh
 interval = 600
 
 [module/xwindow]
