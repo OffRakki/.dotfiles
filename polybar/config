@@ -64,8 +64,8 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = i3 xwindow
-modules-center = filesystem network date kdeconnect
+modules-left = i3 filesystem network date kdeconnect
+modules-center = xwindow
 modules-right = pacaur pulseaudio xkeyboard memory temperature cpu
 tray-position = right
 tray-padding = 2
@@ -113,8 +113,8 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = i3 xwindow 
-modules-center = filesystem network date kdeconnect 
+modules-left = i3 filesystem network date kdeconnect
+modules-center = xwindow
 modules-right = pacaur pulseaudio xkeyboard memory temperature cpu
 
 tray-position = right
@@ -154,7 +154,7 @@ interval = 600
 [module/xwindow]
 type = internal/xwindow
 label = %title%
-label-maxlen = 0 
+label-maxlen = 94 
 labem-empty = Empty
 
 [module/xkeyboard]
