@@ -18,22 +18,22 @@
 
 # Start Flavours
 [colors]
-base00 = ee190134
-base01 = 392551
-base02 = 5A496E
-base03 = 7B6D8B
-base04 = 9C92A8
-base05 = BDB6C5
-base06 = DEDAE2
-base07 = FEFFFF
-base08 = 27D9D5
-base09 = 5BA2B6
-base0A = 8F6C97
-base0B = C33678
-base0C = F80059
-base0D = BD0152
-base0E = 82034C
-base0F = 470546
+base00 = ee1f1f1f
+base01 = f81118
+base02 = 2dc55e
+base03 = ecba0f
+base04 = 2a84d2
+base05 = 4e5ab7
+base06 = 1081d6
+base07 = d6dbe5
+base08 = d6dbe5
+base09 = de352e
+base0A = 1dd361
+base0B = f3bd09
+base0C = 1081d6
+base0D = 5350b9
+base0E = 0f7ddb
+base0F = ffffff
 # End Flavours
 
 [bar/mainbar]
@@ -138,6 +138,7 @@ cursor-scroll = ns-resize
 [module/mpris]
 type = custom/script
 exec = ~/.scripts/mpris/player.sh
+label-maxlen = 50
 interval = 2
 
 [module/pacaur]
@@ -278,7 +279,7 @@ interval = 5
 date =
 date-alt = " %Y-%m-%d"
 
-time = %H:%M %a
+time = %H:%M %a %d
 time-alt = %H:%M:%S %A
 
 format-prefix = 

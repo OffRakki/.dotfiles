@@ -1,46 +1,46 @@
 # Start Flavours
-# Base16 Heetch Dark 256 - alacritty color config
-# Geoffrey Teale (tealeg@gmail.com)
+# Base16 Brogrammer 256 - alacritty color config
+# Vik Ramanujam (http://github.com/piggyslasher)
 colors:
   # Default colors
   primary:
-    background: '0x190134'
-    foreground: '0xBDB6C5'
+    background: '0x1f1f1f'
+    foreground: '0x4e5ab7'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x190134'
-    cursor: '0xBDB6C5'
+    text: '0x1f1f1f'
+    cursor: '0x4e5ab7'
 
   # Normal colors
   normal:
-    black:   '0x190134'
-    red:     '0x27D9D5'
-    green:   '0xC33678'
-    yellow:  '0x8F6C97'
-    blue:    '0xBD0152'
-    magenta: '0x82034C'
-    cyan:    '0xF80059'
-    white:   '0xBDB6C5'
+    black:   '0x1f1f1f'
+    red:     '0xd6dbe5'
+    green:   '0xf3bd09'
+    yellow:  '0x1dd361'
+    blue:    '0x5350b9'
+    magenta: '0x0f7ddb'
+    cyan:    '0x1081d6'
+    white:   '0x4e5ab7'
 
   # Bright colors
   bright:
-    black:   '0x7B6D8B'
-    red:     '0x27D9D5'
-    green:   '0xC33678'
-    yellow:  '0x8F6C97'
-    blue:    '0xBD0152'
-    magenta: '0x82034C'
-    cyan:    '0xF80059'
-    white:   '0xFEFFFF'
+    black:   '0xecba0f'
+    red:     '0xd6dbe5'
+    green:   '0xf3bd09'
+    yellow:  '0x1dd361'
+    blue:    '0x5350b9'
+    magenta: '0x0f7ddb'
+    cyan:    '0x1081d6'
+    white:   '0xd6dbe5'
 
   indexed_colors:
-    - { index: 16, color: '0x5BA2B6' }
-    - { index: 17, color: '0x470546' }
-    - { index: 18, color: '0x392551' }
-    - { index: 19, color: '0x5A496E' }
-    - { index: 20, color: '0x9C92A8' }
-    - { index: 21, color: '0xDEDAE2' }
+    - { index: 16, color: '0xde352e' }
+    - { index: 17, color: '0xffffff' }
+    - { index: 18, color: '0xf81118' }
+    - { index: 19, color: '0x2dc55e' }
+    - { index: 20, color: '0x2a84d2' }
+    - { index: 21, color: '0x1081d6' }
 # End Flavours
 
 window:

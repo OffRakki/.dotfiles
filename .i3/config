@@ -2,27 +2,27 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Start Flavours
-## Base16 Heetch Dark
-# Author: Geoffrey Teale (tealeg@gmail.com)
+## Base16 Brogrammer
+# Author: Vik Ramanujam (http://github.com/piggyslasher)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #190134
-set $base01 #392551
-set $base02 #5A496E
-set $base03 #7B6D8B
-set $base04 #9C92A8
-set $base05 #BDB6C5
-set $base06 #DEDAE2
-set $base07 #FEFFFF
-set $base08 #27D9D5
-set $base09 #5BA2B6
-set $base0A #8F6C97
-set $base0B #C33678
-set $base0C #F80059
-set $base0D #BD0152
-set $base0E #82034C
-set $base0F #470546
+set $base00 #1f1f1f
+set $base01 #f81118
+set $base02 #2dc55e
+set $base03 #ecba0f
+set $base04 #2a84d2
+set $base05 #4e5ab7
+set $base06 #1081d6
+set $base07 #d6dbe5
+set $base08 #d6dbe5
+set $base09 #de352e
+set $base0A #1dd361
+set $base0B #f3bd09
+set $base0C #1081d6
+set $base0D #5350b9
+set $base0E #0f7ddb
+set $base0F #ffffff
 # End Flavours
 
 # __________________________________________________________________________________________
@@ -50,7 +50,7 @@ set $progsync $HOME/.scripts/programbkp/programsync.sh
 # __________________________________________________________________________________________
 
 # flavours
-bindsym $mod+Ctrl+f exec flavours apply
+bindsym $mod+Ctrl+f exec "flavours apply"
 
 # plastic memories <3
 bindsym Ctrl+p exec sleep 0.3 && xdotool type "i hope one day you'll be reunited with the one you cherish."
@@ -74,10 +74,10 @@ exec_always --no-startup-id $onedrive
 exec_always --no-startup-id exec dunst
 
 # Take screenshot
-bindsym Print exec --no-startup-id flameshot gui
-bindsym Ctrl+Shift+1 exec --no-startup-id flameshot screen -n 1 -c
-bindsym Ctrl+Shift+2 exec --no-startup-id flameshot screen -n 0 -c
-bindsym Ctrl+Print exec --no-startup-id flameshot full -c -p ~/Pictures/prints
+bindsym Print exec --no-startup-id "flameshot gui"
+bindsym Ctrl+Shift+1 exec --no-startup-id "flameshot screen -n 1 -c"
+bindsym Ctrl+Shift+2 exec --no-startup-id "flameshot screen -n 0 -c"
+bindsym Ctrl+Print exec --no-startup-id "flameshot full -c -p ~/Pictures/prints"
 
 # mpv volume control
 bindsym $mod+Shift+equal exec $mpvControl +2%
@@ -90,16 +90,20 @@ exec_always --no-startup-id $backup
 bindsym Shift+XF86AudioMute exec $soundoutput1
 bindsym Shift+XF86AudioLowerVolume exec $soundoutput2
 bindsym Shift+XF86AudioRaiseVolume exec $soundoutput3
+bindsym XF86AudioPlay exec "mpris-ctl --player Spotify pp"
+bindsym XF86AudioStop exec "mpris-ctl --player Spotify stop"
+bindsym XF86AudioNext exec "mpris-ctl --player Spotify next"
+bindsym XF86AudioPrev exec "mpris-ctl --player Spotify prev"
 bindsym XF86AudioRaiseVolume exec $volume +2%
 bindsym XF86AudioLowerVolume exec $volume -2%
 bindsym XF86AudioMute exec $volMute
 bindsym Ctrl+m exec $micMute
 
-bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+m exec "pavucontrol"
 
 # kde-connect
 exec_always --no-startup-id $kdeconnect 
-bindsym $mod+Shift+f exec kdeconnect-app
+bindsym $mod+Shift+f exec "kdeconnect-app"
 
 # rofi
 bindsym $mod+d exec --no-startup-id $rofi 
@@ -124,7 +128,7 @@ exec $wallpaper
 exec_always $keyboard
 
 # file manager
-bindsym $mod+Shift+e exec nautilus
+bindsym $mod+Shift+e exec "nautilus"
 # ======================================================================================== #
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
