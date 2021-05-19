@@ -2,27 +2,27 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Start Flavours
-## Base16 vice
-# Author: Thomas Leon Highbaugh thighbaugh@zoho.com
+## Base16 Heetch Dark
+# Author: Geoffrey Teale (tealeg@gmail.com)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #17191E
-set $base01 #22262d
-set $base02 #3c3f4c
-set $base03 #383a47
-set $base04 #555e70
-set $base05 #8b9cbe
-set $base06 #B2BFD9
-set $base07 #f4f4f7
-set $base08 #ff29a8
-set $base09 #85ffe0
-set $base0A #f0ffaa
-set $base0B #0badff
-set $base0C #8265ff
-set $base0D #00eaff
-set $base0E #00ffcc
-set $base0F #ff3d81
+set $base00 #190134
+set $base01 #392551
+set $base02 #5A496E
+set $base03 #7B6D8B
+set $base04 #9C92A8
+set $base05 #BDB6C5
+set $base06 #DEDAE2
+set $base07 #FEFFFF
+set $base08 #27D9D5
+set $base09 #5BA2B6
+set $base0A #8F6C97
+set $base0B #C33678
+set $base0C #F80059
+set $base0D #BD0152
+set $base0E #82034C
+set $base0F #470546
 # End Flavours
 
 # __________________________________________________________________________________________
@@ -39,7 +39,7 @@ set $onedrive rclone --vfs-cache-mode writes mount onedrive: ~/onedrive
 set $mpvControl pactl set-sink-input-volume $(~/.scripts/mpv/mpvvolumecontrol.sh)
 set $soundoutput1 pactl set-default-sink alsa_output.usb-Logitech_Logitech_G633_Gaming_Headset_00000000-00.analog-stereo
 set $soundoutput2 pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo
-set $soundoutput3 pactl set-default-sin alsa_output.pci-0000_00_1f.3.analog-stereo
+set $soundoutput3 pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo
 set $volume pactl set-sink-volume @DEFAULT_SINK@
 set $volMute pactl set-sink-mute @DEFAULT_SINK@ toggle
 set $micMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
@@ -52,7 +52,7 @@ set $progsync $HOME/.scripts/programbkp/programsync.sh
 # flavours
 bindsym $mod+Ctrl+f exec flavours apply
 
-# plastic memories
+# plastic memories <3
 bindsym Ctrl+p exec sleep 0.3 && xdotool type "i hope one day you'll be reunited with the one you cherish."
 
 # lolcard
