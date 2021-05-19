@@ -179,7 +179,7 @@ interval = 25
 
 mount-0 = /home
 
-label-mounted = %{F#684dd5}%mountpoint%%{F-}: %used% / %total% %{F#684dd5}(%percentage_used%%)%{F-}
+label-mounted = %{F#684dd5}~%{F-}%{F#b8064a} %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.base00}
 
