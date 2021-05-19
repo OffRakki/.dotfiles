@@ -2,27 +2,27 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Start Flavours
-## Base16 Material Darker
-# Author: Nate Peterson
+## Base16 vice
+# Author: Thomas Leon Highbaugh thighbaugh@zoho.com
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #212121
-set $base01 #303030
-set $base02 #353535
-set $base03 #4A4A4A
-set $base04 #B2CCD6
-set $base05 #EEFFFF
-set $base06 #EEFFFF
-set $base07 #FFFFFF
-set $base08 #F07178
-set $base09 #F78C6C
-set $base0A #FFCB6B
-set $base0B #C3E88D
-set $base0C #89DDFF
-set $base0D #82AAFF
-set $base0E #C792EA
-set $base0F #FF5370
+set $base00 #17191E
+set $base01 #22262d
+set $base02 #3c3f4c
+set $base03 #383a47
+set $base04 #555e70
+set $base05 #8b9cbe
+set $base06 #B2BFD9
+set $base07 #f4f4f7
+set $base08 #ff29a8
+set $base09 #85ffe0
+set $base0A #f0ffaa
+set $base0B #0badff
+set $base0C #8265ff
+set $base0D #00eaff
+set $base0E #00ffcc
+set $base0F #ff3d81
 # End Flavours
 
 # __________________________________________________________________________________________
@@ -45,6 +45,9 @@ set $keyboard exec_always --no-startup-id sleep 2 && setxkbmap -layout us -varia
 set $ssh sudo systemctl start sshd
 set $progsync $HOME/.scripts/programbkp/programsync.sh
 # __________________________________________________________________________________________
+
+# flavours
+bindsym $mod+Ctrl+f exec flavours apply
 
 # plastic memories
 bindsym Ctrl+p exec sleep 0.3 && xdotool type "i hope one day you'll be reunited with the one you cherish."
