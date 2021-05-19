@@ -1,0 +1,96 @@
+# aliases
+
+# badapple
+alias badapple="cd ~/badapple && mpv --really-quiet --no-video ~/badapple/【東方】Bad\ Apple\!\!\ ＰＶ【影絵】-FtutLA63Cp8.mkv | python2 ~/badapple/player.py bad_apple_wb.txt 30"
+
+
+# ls
+alias ls="ls -FahsSL --color=always"
+alias la="ls -A"
+#alias ls="la --color=always"
+
+
+# exa
+alias exa="exa -lFrs size --colour=always --colour-scale --group-directories-first"
+
+
+# mount-cel
+alias celmount="simple-mtpfs --device 1 ~/mount/"
+alias celumount="fusermount -u ~/mount/"
+
+
+# nvim
+alias vzsh="nvim ~/.zshrc"
+alias vi3="nvim ~/.i3/config"
+alias valias="nvim ~/.aliases"
+alias vim="nvim -c MRU"
+alias v="nvim -c MRU"
+alias vstar="nvim ~/.config/starship.toml"
+alias valias="nvim ~/.aliases"
+alias vbkp="nvim ~/.scripts/backup/backup.sh"
+
+
+# cd
+alias ..='cd ..'
+alias dktp="cd /mnt/c/Users/ferna/desktop"
+
+
+# youtube-dl
+alias ytd="youtube-dl -o '~/yt-downloads/%(title)s.%(ext)s' "
+alias yta-best="youtube-dl --extract-audio --audio-format best -o '~/yt-downloads/%(title)s.%(ext)s' "
+alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 -o '~/yt-downloads/%(title)s.%(ext)s' "
+alias ytd-best="youtube-dl -f bestvideo+bestaudio -o '~/yt-downloads/%(title)s.%(ext)s' "
+
+
+# music
+alias mpa="~/.scripts/mpv/mpa.sh"
+alias lofi="mpv --ytdl-format=bestaudio ytdl://ytsearch:'www.youtube.com/watch?v=hGvWS1pLb3g'"
+alias lofi2="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=zRRq4Rd1lPs'"
+alias hype="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=MTahu17Cgc8'"
+alias lucas20="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=fLpCyU_SHRo'"
+alias lucas19="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=PhfXQ58ywuI'"
+alias violin="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=iceS6BvhuQ8'"
+alias violin2="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=synJbsrk0k8'"
+alias villain="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=le1l4eeo8Ow'"
+alias bnha="mpv --no-video ~/Music/BNHA/*"
+alias supernova="mpv --no-video --loop ~/yt-downloads/From\ Fall\ to\ Spring\ -\ Supernova\ \(Official\ Lyric\ Video\).opus"
+
+# misc
+alias pipes="pipes.sh -t 3 -f 100 -R -r 0"
+alias htop="bpytop"
+alias fw="feh --bg-scale -z ~/Pictures/Wallpapers/"
+alias cat="bat"
+alias susp="i3exit suspend"
+alias xclip="xclip -selection clipboard"
+
+
+# pac-aur
+alias pacsyu="sudo pacman -Syyu"
+alias yaysyu="yay -Syu"
+alias parusyu="paru Syu --noconfirm"
+alias paru="paru --skipreview"
+
+
+# file management
+alias mv="mv -i"
+alias rm='rm -i'
+alias cp="cp -i"
+alias df="df -h"
+
+
+# grep
+alias grep="grep --color=always"
+alias egrep="egrep --color=always"
+alias fgrep="fgrep --color=always"
+
+# ethereum
+alias ethus="ethminer -U -R -P 'stratum1+tcp://0xB9c434215c09E8c4D6b621E6488D55E1d20CE446.megumin@eth-us-east.flexpool.io:4444'"
+alias ethbr="ethminer -U -R -P 'stratum1+tcp://0xB9c434215c09E8c4D6b621E6488D55E1d20CE446.megumin@eth-br.flexpool.io:4444'"
+alias gethsync="geth --syncmode "fast" --http --signer ~/.clef/clef.ipc"
+alias gethatt="geth attach ~/.ethereum/geth.ipc"
+alias clefkey="clef --keystore ~/.ethereum/keystore"
+alias eth="~/.scripts/eth/eth.sh"
+alias weth="watch -n 300 ~/.scripts/eth/eth.sh"
+
+# bitwarden
+alias bwgc=~/.scripts/bitwarden/xclip.sh
