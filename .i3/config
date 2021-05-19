@@ -37,6 +37,9 @@ set $kdeconnect $HOME/.scripts/kdeconnect/kdeconnect.sh
 set $kaomoji $HOME/.scripts/rofi/kaomoji/kaomoji.sh
 set $onedrive rclone --vfs-cache-mode writes mount onedrive: ~/onedrive
 set $mpvControl pactl set-sink-input-volume $(~/.scripts/mpv/mpvvolumecontrol.sh)
+set $soundoutput1 pactl set-default-sink alsa_output.usb-Logitech_Logitech_G633_Gaming_Headset_00000000-00.analog-stereo
+set $soundoutput2 pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo
+set $soundoutput3 pactl set-default-sin alsa_output.pci-0000_00_1f.3.analog-stereo
 set $volume pactl set-sink-volume @DEFAULT_SINK@
 set $volMute pactl set-sink-mute @DEFAULT_SINK@ toggle
 set $micMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
@@ -84,6 +87,9 @@ bindsym $mod+Shift+minus exec $mpvControl -2%
 exec_always --no-startup-id $backup 
 
 # volume geral
+bindsym Shift+XF86AudioMute exec $soundoutput1
+bindsym Shift+XF86AudioLowerVolume exec $soundoutput2
+bindsym Shift+XF86AudioRaiseVolume exec $soundoutput3
 bindsym XF86AudioRaiseVolume exec $volume +2%
 bindsym XF86AudioLowerVolume exec $volume -2%
 bindsym XF86AudioMute exec $volMute
