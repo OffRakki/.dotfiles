@@ -41,7 +41,7 @@ set $volume pactl set-sink-volume @DEFAULT_SINK@
 set $volMute pactl set-sink-mute @DEFAULT_SINK@ toggle
 set $micMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
 set $resolution xrandr --output HDMI-1 --mode "1920x1080"
-set $keyboard exec_always --no-startup-id setxkbmap -layout us -variant intl -model pc105
+set $keyboard exec_always --no-startup-id sleep 2 && setxkbmap -layout us -variant intl -model pc105
 set $ssh sudo systemctl start sshd
 set $progsync $HOME/.scripts/programbkp/programsync.sh
 # __________________________________________________________________________________________
@@ -68,9 +68,10 @@ exec_always --no-startup-id $onedrive
 exec_always --no-startup-id exec dunst
 
 # Take screenshot
-bindsym Print exec --no-startup-id escrotum -sC
-bindsym Ctrl+Print --release exec --no-startup-id escrotum -C
-bindsym Shift+Print --release exec --no-startup-id escrotum -s '~/Pictures/prints/%Y-%m-%d_$wx$h.png'
+bindsym Print exec --no-startup-id flameshot gui
+bindsym Ctrl+Shift+1 exec --no-startup-id flameshot screen -n 1 -c
+bindsym Ctrl+Shift+2 exec --no-startup-id flameshot screen -n 0 -c
+bindsym Ctrl+Print exec --no-startup-id flameshot full -c -p ~/Pictures/prints
 
 # mpv volume control
 bindsym $mod+Shift+equal exec $mpvControl +2%
@@ -220,7 +221,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+#bindsym $mod+Shift+s sticky toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
