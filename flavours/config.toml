@@ -38,3 +38,7 @@ subtemplate = 'default-256'
 [[item]]
 file = '~/.config/polybar/config'
 template = 'polybar'
+
+[[item]]
+file = '~/.config/dunst/dunstrc'
+template = 'dunst'

@@ -2,26 +2,26 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Start Flavours
-## Base16 Brogrammer
-# Author: Vik Ramanujam (http://github.com/piggyslasher)
+## Base16 uwunicorn
+# Author: Fernando Marques (https://github.com/RakkiUwU)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #1f1f1f
+set $base00 #1b1824
 set $base01 #f81118
-set $base02 #2dc55e
-set $base03 #ecba0f
+set $base02 #2b2436
+set $base03 #6126b5
 set $base04 #2a84d2
-set $base05 #4e5ab7
+set $base05 #734eb7
 set $base06 #1081d6
 set $base07 #d6dbe5
 set $base08 #d6dbe5
 set $base09 #de352e
-set $base0A #1dd361
-set $base0B #f3bd09
-set $base0C #1081d6
-set $base0D #5350b9
-set $base0E #0f7ddb
+set $base0A #6e29c2
+set $base0B #9c0346
+set $base0C #6f2ac9
+set $base0D #6126b5
+set $base0E #a31c57
 set $base0F #ffffff
 # End Flavours
 
@@ -71,7 +71,7 @@ exec_always --no-startup-id $polybar
 exec_always --no-startup-id $onedrive
 
 # dunst (notify)
-exec_always --no-startup-id exec dunst
+exec_always --no-startup-id killall dunst; dunst &
 
 # Take screenshot
 bindsym Print exec --no-startup-id "flameshot gui"

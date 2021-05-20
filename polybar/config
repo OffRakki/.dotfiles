@@ -18,21 +18,21 @@
 
 # Start Flavours
 [colors]
-base00 = ee1f1f1f
+base00 = ee1b1824
 base01 = f81118
-base02 = 2dc55e
-base03 = ecba0f
+base02 = 2b2436
+base03 = 6126b5
 base04 = 2a84d2
-base05 = 4e5ab7
+base05 = 734eb7
 base06 = 1081d6
 base07 = d6dbe5
 base08 = d6dbe5
 base09 = de352e
-base0A = 1dd361
-base0B = f3bd09
-base0C = 1081d6
-base0D = 5350b9
-base0E = 0f7ddb
+base0A = 6e29c2
+base0B = 9c0346
+base0C = 6f2ac9
+base0D = 6126b5
+base0E = a31c57
 base0F = ffffff
 # End Flavours
 

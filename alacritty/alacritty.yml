@@ -1,44 +1,44 @@
 # Start Flavours
-# Base16 Brogrammer 256 - alacritty color config
-# Vik Ramanujam (http://github.com/piggyslasher)
+# Base16 uwunicorn 256 - alacritty color config
+# Fernando Marques (https://github.com/RakkiUwU)
 colors:
   # Default colors
   primary:
-    background: '0x1f1f1f'
-    foreground: '0x4e5ab7'
+    background: '0x1b1824'
+    foreground: '0x734eb7'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x1f1f1f'
-    cursor: '0x4e5ab7'
+    text: '0x1b1824'
+    cursor: '0x734eb7'
 
   # Normal colors
   normal:
-    black:   '0x1f1f1f'
+    black:   '0x1b1824'
     red:     '0xd6dbe5'
-    green:   '0xf3bd09'
-    yellow:  '0x1dd361'
-    blue:    '0x5350b9'
-    magenta: '0x0f7ddb'
-    cyan:    '0x1081d6'
-    white:   '0x4e5ab7'
+    green:   '0x9c0346'
+    yellow:  '0x6e29c2'
+    blue:    '0x6126b5'
+    magenta: '0xa31c57'
+    cyan:    '0x6f2ac9'
+    white:   '0x734eb7'
 
   # Bright colors
   bright:
-    black:   '0xecba0f'
+    black:   '0x6126b5'
     red:     '0xd6dbe5'
-    green:   '0xf3bd09'
-    yellow:  '0x1dd361'
-    blue:    '0x5350b9'
-    magenta: '0x0f7ddb'
-    cyan:    '0x1081d6'
+    green:   '0x9c0346'
+    yellow:  '0x6e29c2'
+    blue:    '0x6126b5'
+    magenta: '0xa31c57'
+    cyan:    '0x6f2ac9'
     white:   '0xd6dbe5'
 
   indexed_colors:
     - { index: 16, color: '0xde352e' }
     - { index: 17, color: '0xffffff' }
     - { index: 18, color: '0xf81118' }
-    - { index: 19, color: '0x2dc55e' }
+    - { index: 19, color: '0x2b2436' }
     - { index: 20, color: '0x2a84d2' }
     - { index: 21, color: '0x1081d6' }
 # End Flavours
