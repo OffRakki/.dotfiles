@@ -55,12 +55,15 @@ alias villain="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.
 alias bnha="mpv --no-video ~/Music/BNHA/*"
 alias supernova="mpv --no-video --loop ~/yt-downloads/From\ Fall\ to\ Spring\ -\ Supernova\ \(Official\ Lyric\ Video\).opus"
 
+# git
+alias gitall="git add * && git commit -a && git push"
+
 # misc
 alias pipes="pipes.sh -t 3 -f 100 -R -r 0"
 alias htop="bpytop"
 alias fw="feh --bg-scale -z ~/Pictures/Wallpapers/"
 alias cat="bat"
-alias susp="i3exit suspend"
+alias suspend="i3exit suspend"
 alias xclip="xclip -selection clipboard"
 
 

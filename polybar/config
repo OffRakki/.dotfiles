@@ -144,7 +144,7 @@ tail = true
 type = custom/script
 exec = ~/.scripts/mpris/player.sh
 label-maxlen = 40
-interval = 2
+interval = 5
 
 [module/pacaur]
 type = custom/script
@@ -261,7 +261,7 @@ label-connected = %downspeed% | %upspeed%
 label-connected-foreground = #eefafa
 label-disconnected = not connected
 label-disconnected-foreground = #66ffff
-format-packetloss = <animation-packetloss> <label-connected>
+format-packetloss = <label-connected>
 
 accumulate-stats = true 
 ping-interval = 3
