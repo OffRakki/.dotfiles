@@ -274,6 +274,7 @@ animation-packetloss-1-foreground = #000000
 ; Framerate in milliseconds
 animation-packetloss-framerate = 500
 format-connected-underline = #55aa55
+format-disconnected-underline = #000000
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.base05}
 
