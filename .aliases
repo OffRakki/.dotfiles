@@ -65,6 +65,8 @@ alias fw="feh --bg-scale -z ~/Pictures/Wallpapers/"
 alias cat="bat"
 alias suspend="i3exit suspend"
 alias xclip="xclip -selection clipboard"
+alias pudimcoin="wine64 ~/pudimcoin/pudimcoin.exe"
+alias pudimmine="~/.scripts/pudim/pudim.sh"
 
 
 # pac-aur
