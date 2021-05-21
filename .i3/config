@@ -47,6 +47,7 @@ set $resolution xrandr --output HDMI-1 --mode "1920x1080"
 set $keyboard exec_always --no-startup-id sleep 2 && setxkbmap -layout us -variant intl -model pc105
 set $ssh sudo systemctl start sshd
 set $progsync $HOME/.scripts/programbkp/programsync.sh
+set $screenrecord screencast -S -n -r 60 -o ~/Videos/screencast -u
 # __________________________________________________________________________________________
 
 # flavours
@@ -73,11 +74,12 @@ exec_always --no-startup-id $onedrive
 # dunst (notify)
 exec_always --no-startup-id killall dunst; dunst &
 
-# Take screenshot
+# Screenshot & Screen record
 bindsym Print exec --no-startup-id "flameshot gui"
 bindsym Ctrl+Shift+1 exec --no-startup-id "flameshot screen -n 1 -c"
 bindsym Ctrl+Shift+2 exec --no-startup-id "flameshot screen -n 0 -c"
 bindsym Ctrl+Print exec --no-startup-id "flameshot full -c -p ~/Pictures/prints"
+bindsym Ctrl+Shift+Print exec --no-startup-id alacritty -e $screenrecord
 
 # mpv volume control
 bindsym $mod+Shift+equal exec $mpvControl +2%
@@ -133,7 +135,7 @@ bindsym $mod+Shift+e exec "nautilus"
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
-set $alt Mod1
+set $Alt Mod1
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
