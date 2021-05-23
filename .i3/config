@@ -32,6 +32,7 @@ set $calc $HOME/.scripts/rofi/calc.sh
 set $polybar $HOME/.config/polybar/launch.sh
 set $backup $HOME/.scripts/backup/backup.sh
 set $rofi $HOME/.scripts/rofi/run.sh
+set $rofitab $HOME/.scripts/rofi/alttab.sh
 set $wallpaper $HOME/.scripts/wallpaper/feh.sh
 set $kdeconnect $HOME/.scripts/kdeconnect/kdeconnect.sh
 set $kaomoji $HOME/.scripts/rofi/kaomoji/kaomoji.sh
@@ -114,7 +115,9 @@ bindsym $mod+c exec --no-startup-id $calc
 # rofi twitch
 bindsym $mod+t exec --no-startup-id kpl
 # rofi kaomoji
-bindsym $mod+Ctrl+k exec $kaomoji
+bindsym $mod+Ctrl+k exec --no-startup-id $kaomoji
+# rofi tabs
+bindsym $alt+Tab exec --no-startup-id $rofitab
 
 # Picom
 exec_always killall picom; picom
