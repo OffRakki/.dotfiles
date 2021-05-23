@@ -66,7 +66,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 filesystem network date mpris minicava
 modules-center = xwindow
-modules-right = pacaur pulseaudio memory temperature cpu
+modules-right = pacaur pulseaudio memory temperature cpu nvidia-gpu
 tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
@@ -115,7 +115,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 filesystem network date mpris minicava
 modules-center = xwindow 
-modules-right = pacaur pulseaudio memory temperature cpu
+modules-right = pacaur pulseaudio memory temperature cpu nvidia-gpu
 
 tray-position = right
 tray-padding = 2
@@ -184,6 +184,12 @@ tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/nvidia-gpu]
+type = custom/script
+exec = ~/.scripts/gpunvidia/gpu.sh
+interval = 2
+format-underline = ${colors.base0E}
 
 [module/bigcava]
 type = custom/script
