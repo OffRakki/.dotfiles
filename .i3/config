@@ -68,6 +68,7 @@ exec --no-startup-id $ssh
 
 # Start polybar
 exec_always --no-startup-id $polybar
+bindsym $mod+Ctrl+Shift+p exec --no-startup-id $polybar
 
 # Start onedrive
 exec_always --no-startup-id $onedrive

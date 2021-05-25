@@ -64,7 +64,7 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = i3 filesystem network date mpris minicava
+modules-left = i3 filesystem date network mpris minicava
 modules-center = xwindow
 modules-right = pacaur pulseaudio memory temperature cpu nvidia-gpu
 ;tray-position = right
@@ -113,7 +113,7 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = i3 filesystem network date mpris minicava
+modules-left = i3 filesystem date network mpris minicava
 modules-center = xwindow 
 modules-right = pacaur pulseaudio memory temperature cpu nvidia-gpu tray
 
@@ -382,10 +382,10 @@ interface = enp3s0
 interval = 0.5
 
 label-connected = %downspeed% | %upspeed%
-label-connected-foreground = #eefafa
+label-connected-foreground = ${colors.base05}
 label-disconnected = not connected
 label-disconnected-foreground = #66ffff
-format-packetloss = <label-connected>
+format-packetloss = <animation-packetloss> <label-connected>
 
 accumulate-stats = true 
 ping-interval = 3
