@@ -45,7 +45,7 @@ set $volume pactl set-sink-volume @DEFAULT_SINK@
 set $volMute pactl set-sink-mute @DEFAULT_SINK@ toggle
 set $micMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
 set $resolution xrandr --output HDMI-1 --mode "1920x1080"
-set $keyboard exec_always --no-startup-id sleep 2 && setxkbmap -layout us -variant intl -model pc105
+set $keyboard sleep 2 && setxkbmap -layout us -variant intl -model pc105
 set $ssh sudo systemctl start sshd
 set $progsync $HOME/.scripts/programbkp/programsync.sh
 set $screenrecord screencast -S -n -r 60 -o ~/Videos/screencast -u
@@ -130,7 +130,7 @@ exec $resolution
 exec_always --no-startup-id $wallpaper 
 
 # Layout Teclado
-exec_always $keyboard
+exec_always --no-startup-id $keyboard
 
 # file manager
 bindsym $mod+Shift+e exec "nautilus"
@@ -460,6 +460,7 @@ set_from_resource $term_color15    color15
 # Set inner/outer gaps
 gaps inner 4
 gaps outer 0 
+gaps top 32
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
