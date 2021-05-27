@@ -4,7 +4,7 @@ separator_color = "#734eb7"
 
 [base16_low]
     msg_urgency = low
-    background = "#f81118"
+    background = "#263238"
     foreground = "#6126b5"
 
 [base16_normal]
@@ -208,7 +208,7 @@ separator_color = "#734eb7"
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#263238"
+    background = "#153238"
     foreground = "#aaaaaa"
     timeout = 10
 
@@ -218,7 +218,7 @@ separator_color = "#734eb7"
     timeout = 10
 
 [urgency_critical]
-    background = "#D62929"
+    background = "#a19879"
     foreground = "#F9FAF9"
     timeout = 0
 

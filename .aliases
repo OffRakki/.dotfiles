@@ -32,8 +32,6 @@ alias vbkp="nvim ~/.scripts/backup/backup.sh"
 
 # cd
 alias ..='cd ..'
-alias dktp="cd /mnt/c/Users/ferna/desktop"
-
 
 # youtube-dl
 alias ytd="youtube-dl -o '~/yt-downloads/%(title)s.%(ext)s' "
