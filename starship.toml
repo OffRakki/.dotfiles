@@ -1,5 +1,6 @@
 # Don't print a new line at the start of the prompt
 add_newline = true 
+command_timeout = 20000
 
 # Make prompt a single line instead of two lines
 [line_break]
@@ -12,21 +13,22 @@ disabled = false
 [hostname]
 ssh_only = false
 disabled = false 
-style = "bold underline #9e1b5e"
+style = "bold underline #7A5FEE"
 
 [cmd_duration]
 min_time = 0
 show_milliseconds = true
 disabled = false
-style = "bold #499abf"
-format = "[$duration]($style) "
+style = "bold #7A5FEE"
+format = " took [$duration]($style) "
 
 [memory_usage]
-disabled = true
+disabled = true 
 threshold = 5 
-symbol = "🐏"
-style = "bold dimmed white"
-format = "via $symbol [${ram}]($style) "
+symbol = ""
+style = "bold #56319e"
+format = "|[${ram}]($style)|"
 
 [time]
 disabled = false
+style = "bold #56319e"

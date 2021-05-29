@@ -30,6 +30,10 @@ template = 'i3'
 subtemplate = 'colors'
 hook = 'i3-msg reload'
 
+#[[item]]
+#file = '~/.config/starship.toml'
+#template = 'starship'
+
 [[item]]
 file = '~/.config/alacritty/alacritty.yml'
 template = 'alacritty'
@@ -42,3 +46,9 @@ template = 'polybar'
 [[item]]
 file = '~/.config/dunst/dunstrc'
 template = 'dunst'
+
+[[item]]
+file = "~/.config/nvim/colors/base16.vim"
+template = "vim"
+rewrite = true
+hook = "reloadnvim"

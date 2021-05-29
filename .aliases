@@ -21,12 +21,15 @@ alias celumount="fusermount -u ~/mount/"
 
 # nvim
 alias vzsh="nvim ~/.zshrc"
+alias nvzsh="neovide ~/.zshrc"
 alias vi3="nvim ~/.i3/config"
+alias nvi3="neovide ~/.i3/config"
 alias valias="nvim ~/.aliases"
-alias vim="nvim -c MRU"
-alias v="nvim -c MRU"
+alias nvalias="neovide ~/.aliases"
+alias vim="nvim"
+alias v="nvim"
+alias nv="neovide"
 alias vstar="nvim ~/.config/starship.toml"
-alias valias="nvim ~/.aliases"
 alias vbkp="nvim ~/.scripts/backup/backup.sh"
 
 

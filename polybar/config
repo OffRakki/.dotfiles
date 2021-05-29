@@ -1,21 +1,21 @@
 # Start Flavours
 [colors]
-base00 = ee1b1824
-base01 = f81118
-base02 = 2b2436
-base03 = 6126b5
-base04 = 2a84d2
-base05 = 734eb7
-base06 = 1081d6
-base07 = d6dbe5
-base08 = d6dbe5
-base09 = de352e
-base0A = 6e29c2
-base0B = 9c0346
-base0C = 6f2ac9
-base0D = 6126b5
-base0E = a31c57
-base0F = ffffff
+base00 = ee17191E
+base01 = 22262d
+base02 = 3c3f4c
+base03 = 383a47
+base04 = 555e70
+base05 = 8b9cbe
+base06 = B2BFD9
+base07 = f4f4f7
+base08 = ff29a8
+base09 = 85ffe0
+base0A = f0ffaa
+base0B = 0badff
+base0C = 8265ff
+base0D = 00eaff
+base0E = 00ffcc
+base0F = ff3d81
 # End Flavours
 
 [bar/mainbar]
@@ -285,7 +285,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#684dd5}/%{F-}%{F#b8064a} %free%
+label-mounted = %{F#684dd5}/%{F-}%{F$colors.base05} %used%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.base00}
 
