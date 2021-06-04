@@ -5,7 +5,6 @@ configuration {
 	display-ssh: "~#";
 	show-icons: true;
 	sidebar-mode: false;
-	font: "monospace bold 15";
 }
 
 /* Start flavours */
