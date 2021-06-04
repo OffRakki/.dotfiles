@@ -10,10 +10,16 @@ disabled = false
 [package]
 disabled = false 
 
+[username]
+show_always = true
+style_user = "bold underline #7A5FEE"
+format = "[$user]($style)"
+
 [hostname]
 ssh_only = false
 disabled = false 
-style = "bold underline #7A5FEE"
+style = "bold underline #c41b5c"
+format= "[@$hostname]($style) in "
 
 [cmd_duration]
 min_time = 0

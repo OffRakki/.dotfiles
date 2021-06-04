@@ -126,7 +126,7 @@ offset-y = 3%
 radius = 6.0
 fixed-center = false
 
-background = ${colors.base02}
+background = ${colors.base00}
 foreground = ${colors.base05}
 
 line-size = 2

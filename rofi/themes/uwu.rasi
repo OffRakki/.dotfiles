@@ -1,0 +1,121 @@
+configuration {
+	display-drun: "UwU";
+	display-run: "";
+	display-window: "";
+	display-ssh: "~#";
+	show-icons: true;
+	sidebar-mode: false;
+	font: "monospace bold 15";
+}
+
+/* Start flavours */
+/**
+ * Base16 vice ROFI Color theme
+ *
+ * Authors
+ *  Scheme: Thomas Leon Highbaugh thighbaugh@zoho.com
+ *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ */
+
+* {
+    red:                         rgba ( 255, 41, 168, 100 % );
+    blue:                        rgba ( 0, 234, 255, 100 % );
+    lightfg:                     rgba ( 178, 191, 217, 100 % );
+    lightbg:                     rgba ( 34, 38, 45, 100 % );
+    foreground:                  rgba ( 139, 156, 190, 100 % );
+    background:                  rgba ( 23, 25, 30, 100 % );
+    background-color:            rgba ( 23, 25, 30, 0 % );
+    separatorcolor:              @foreground;
+    border-color:                @foreground;
+    selected-normal-foreground:  @lightbg;
+    selected-normal-background:  @lightfg;
+    selected-active-foreground:  @background;
+    selected-active-background:  @blue;
+    selected-urgent-foreground:  @background;
+    selected-urgent-background:  @red;
+    normal-foreground:           @foreground;
+    normal-background:           @background;
+    active-foreground:           @blue;
+    active-background:           @background;
+    urgent-foreground:           @red;
+    urgent-background:           @background;
+    alternate-normal-foreground: @foreground;
+    alternate-normal-background: @lightbg;
+    alternate-active-foreground: @blue;
+    alternate-active-background: @lightbg;
+    alternate-urgent-foreground: @red;
+    alternate-urgent-background: @lightbg;
+}
+/* End flavours */
+
+window {
+  transparency: "real";
+  fullscreen: false;
+  spacing: 0;
+  font: "Knack Nerd Font 14";
+  background-color: @background;
+  text-color: @foreground;
+}
+
+mainbox {
+  padding: 0% 0%;
+}
+
+inputbar {
+  margin: 0px 0px 10px 0px;
+  children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+  text-color: @blue;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @foreground;
+}
+
+entry {
+  margin: 0px 10px;
+}
+
+listview {
+  spacing: 3px;
+  dynamic: true;
+  scrollbar: false;
+}
+
+element {
+  padding: 5px;
+  text-color: @foreground;
+  highlight: bold #95ee8f; /* green */
+  border-radius: 3px;
+}
+
+element selected {
+  background-color: @selected-normal-background;
+  text-color: @foreground;
+}
+
+element urgent, element selected urgent {
+  text-color: @red;
+}
+
+element active, element selected active {
+  text-color: @selected-normal-foreground;
+}
+
+message {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @background-color;
+  border: 1px;
+  border-color: @border-color;
+}
+
+button selected {
+  padding: 5px;
+  border-radius: 3px;
+  background-color: @background-color;
+}
