@@ -1,5 +1,5 @@
 configuration {
-	display-drun: "";
+	display-drun: "UwU";
 	display-run: "";
 	display-window: "";
 	display-ssh: "~#";
@@ -7,6 +7,15 @@ configuration {
 	show-icons: true;
 	sidebar-mode: false;
 }
+
+/* Start flavours */
+/**
+ * Base16 vice ROFI Color theme
+ *
+ * Authors
+ *  Scheme: Thomas Leon Highbaugh thighbaugh@zoho.com
+ *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ */
 
 * {
     red:                         rgba ( 255, 41, 168, 100 % );
@@ -37,6 +46,7 @@ configuration {
     alternate-urgent-foreground: @red;
     alternate-urgent-background: @lightbg;
 }
+/* End flavours */
 
 window {
   transparency: "real";
@@ -45,7 +55,6 @@ window {
   font: "Knack Nerd Font 14";
   background-color: @background;
   text-color: @foreground;
-  border-radius: 10px;
 }
 
 mainbox {
@@ -53,7 +62,7 @@ mainbox {
 }
 
 inputbar {
-  margin: 0px 0px -15px 0px;
+  margin: 0px 0px 10px 0px;
   children: [prompt, textbox-prompt-colon, entry, case-indicator];
 }
 
@@ -61,9 +70,14 @@ prompt {
   text-color: @blue;
 }
 
+textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  text-color: @foreground;
+}
+
 entry {
   margin: 0px 10px;
-  enabled: false;
 }
 
 listview {
@@ -80,8 +94,8 @@ element {
 }
 
 element selected {
-  background-color: #502791;
-  text-color: @background;
+  background-color: @background;
+  text-color: @foreground;
 }
 
 element urgent, element selected urgent {

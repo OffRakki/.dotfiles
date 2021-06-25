@@ -4,16 +4,6 @@
 alias badapple="cd ~/badapple && mpv --really-quiet --no-video ~/badapple/【東方】Bad\ Apple\!\!\ ＰＶ【影絵】-FtutLA63Cp8.mkv | python2 ~/badapple/player.py bad_apple_wb.txt 30"
 
 
-# ls
-alias ls="ls -FahsSL --color=always"
-alias la="ls -A"
-#alias ls="la --color=always"
-
-
-# exa
-alias exa="exa -lFrs size --colour=always --colour-scale --group-directories-first"
-
-
 # mount-cel
 alias celmount="simple-mtpfs --device 1 ~/mount/"
 alias celumount="fusermount -u ~/mount/"
@@ -68,6 +58,7 @@ alias suspend="i3exit suspend"
 alias xclip="xclip -selection clipboard"
 alias pudimcoin="wine64 ~/pudimcoin/pudimcoin.exe"
 alias pudimmine="~/.scripts/pudim/pudim.sh"
+alias localserver="~/.scripts/localserver/startlocalserver"
 
 
 # pac-aur
@@ -83,7 +74,13 @@ alias rm='rm -i'
 alias cp="cp -i"
 alias df="df -h"
 alias du="du -hc --time"
-
+alias tree="tree --du -h"
+alias ls="ls -FahsSL --color=always"
+alias la="ls -A"
+#alias ls="la --color=always"
+alias exa="exa -lFs name --colour=always --colour-scale --group-directories-first"
+alias rsync="rsync -h --progress --recursive --append"
+alias fzf="fzf --color=16"
 
 # grep
 alias grep="grep --color=always"
@@ -91,8 +88,8 @@ alias egrep="egrep --color=always"
 alias fgrep="fgrep --color=always"
 
 # ethereum
-alias ethus="ethminer -U -R -P 'stratum1+tcp://0xB9c434215c09E8c4D6b621E6488D55E1d20CE446.megumin@eth-us-east.flexpool.io:4444'"
-alias ethbr="ethminer -U -R -P 'stratum1+tcp://0xB9c434215c09E8c4D6b621E6488D55E1d20CE446.megumin@eth-br.flexpool.io:4444'"
+alias ethus="ethminer -U -R -P 'stratum1+tcp://0xB9c434215c09E8c4D6b621E6488D55E1d20CE446.mashiro@eth-us-east.flexpool.io:4444'"
+alias ethbr="ethminer -U -R -P 'stratum1+tcp://0xB9c434215c09E8c4D6b621E6488D55E1d20CE446.mashiro@eth-br.flexpool.io:4444'"
 alias gethsync="geth --syncmode "fast" --http --signer ~/.clef/clef.ipc"
 alias gethatt="geth attach ~/.ethereum/geth.ipc"
 alias clefkey="clef --keystore ~/.ethereum/keystore"

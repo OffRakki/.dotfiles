@@ -67,7 +67,7 @@ subtemplate = "gtk-2"
 rewrite = true
 
 [[item]]
-file = "~/.config/rofi/themes/uwu.rasi"
+file = "~/.config/rofi/themes/uwuflavours.rasi"
 template = 'rofi'
 subtemplate = 'colors'
 rewrite = false
