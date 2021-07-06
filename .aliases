@@ -30,7 +30,7 @@ alias ..='cd ..'
 alias ytd="youtube-dl -o '~/yt-downloads/%(title)s.%(ext)s' "
 alias yta-best="youtube-dl --extract-audio --audio-format best -o '~/yt-downloads/%(title)s.%(ext)s' "
 alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 -o '~/yt-downloads/%(title)s.%(ext)s' "
-alias ytd-best="youtube-dl -f bestvideo+bestaudio -o '~/yt-downloads/%(title)s.%(ext)s' "
+alias ytd-best="youtube-dl -f mp4+bestaudio -o '~/yt-downloads/%(title)s.%(ext)s' "
 
 
 # music
