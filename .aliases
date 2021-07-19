@@ -45,11 +45,13 @@ alias violin2="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.
 alias villain="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=le1l4eeo8Ow'"
 alias bnha="mpv --no-video ~/Music/BNHA/*"
 alias supernova="mpv --no-video --loop ~/yt-downloads/From\ Fall\ to\ Spring\ -\ Supernova\ \(Official\ Lyric\ Video\).opus"
+alias gambare="mpv --ytdl --no-video 'https://www.youtube.com/watch?v=gnxNdYi69Zg'"
 
 # git
 alias gitall="git add * && git commit -a && git push"
 
 # misc
+alias nf="neofetch"
 alias pipes="pipes.sh -t 3 -f 100 -R -r 0"
 alias htop="bpytop"
 alias fw="feh --bg-scale -z ~/Pictures/Wallpapers/"
