@@ -32,6 +32,9 @@ alias yta-best="youtube-dl --extract-audio --audio-format best -o '~/yt-download
 alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 -o '~/yt-downloads/%(title)s.%(ext)s' "
 alias ytd-best="youtube-dl -f mp4+bestaudio -o '~/yt-downloads/%(title)s.%(ext)s' "
 
+# mpv
+alias mpvs="~/.scripts/mpv/mpvs"
+alias mpvsa="~/.scripts/mpv/mpvsa"
 
 # music
 alias mpa="~/.scripts/mpv/mpa.sh"

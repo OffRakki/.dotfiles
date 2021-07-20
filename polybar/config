@@ -285,7 +285,7 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#684dd5}/%{F-}%{F$colors.base05} %used%
+label-mounted = %{F#684dd5}/%{F-}%{F#ffeed5d9} %used%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.base00}
 
