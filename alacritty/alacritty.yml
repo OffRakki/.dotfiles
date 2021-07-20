@@ -1,46 +1,46 @@
 # Start Flavours
-# Base16 UwUnicorn 256 - alacritty color config
-# Fernando Marques (https://github.com/RakkiUwU) | Gabriel Fontes (https://github.com/Misterio77)
+# Base16 Katy 256 - alacritty color config
+# George Essig (https://github.com/gessig)
 colors:
   # Default colors
   primary:
-    background: '0x241b26'
-    foreground: '0xeed5d9'
+    background: '0x292d3e'
+    foreground: '0x959dcb'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x241b26'
-    cursor: '0xeed5d9'
+    text: '0x292d3e'
+    cursor: '0x959dcb'
 
   # Normal colors
   normal:
-    black:   '0x241b26'
-    red:     '0x877bb6'
-    green:   '0xc965bf'
-    yellow:  '0xa84a73'
-    blue:    '0x6a9eb5'
-    magenta: '0x78a38f'
-    cyan:    '0x9c5fce'
-    white:   '0xeed5d9'
+    black:   '0x292d3e'
+    red:     '0x6e98e1'
+    green:   '0x78c06e'
+    yellow:  '0xe0a557'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x83b7e5'
+    white:   '0x959dcb'
 
   # Bright colors
   bright:
-    black:   '0x6c3cb2'
-    red:     '0x877bb6'
-    green:   '0xc965bf'
-    yellow:  '0xa84a73'
-    blue:    '0x6a9eb5'
-    magenta: '0x78a38f'
-    cyan:    '0x9c5fce'
-    white:   '0xe4ccd0'
+    black:   '0x676e95'
+    red:     '0x6e98e1'
+    green:   '0x78c06e'
+    yellow:  '0xe0a557'
+    blue:    '0x82aaff'
+    magenta: '0xc792ea'
+    cyan:    '0x83b7e5'
+    white:   '0xffffff'
 
   indexed_colors:
-    - { index: 16, color: '0xde5b44' }
-    - { index: 17, color: '0xa3a079' }
-    - { index: 18, color: '0x2f2a3f' }
-    - { index: 19, color: '0x46354a' }
-    - { index: 20, color: '0x7e5f83' }
-    - { index: 21, color: '0xd9c2c6' }
+    - { index: 16, color: '0xf78c6c' }
+    - { index: 17, color: '0xff5370' }
+    - { index: 18, color: '0x444267' }
+    - { index: 19, color: '0x5c598b' }
+    - { index: 20, color: '0x8796b0' }
+    - { index: 21, color: '0x959dcb' }
 # End Flavours
 
 window:
