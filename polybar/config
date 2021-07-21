@@ -427,6 +427,7 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 label-volume = 墳  %percentage%%
 label-volume-foreground = ${root.foreground}
+format-volume-underline = ${colors.base0B}
 
 label-muted = "婢"
 
