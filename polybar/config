@@ -1,21 +1,21 @@
 # Start Flavours
 [colors]
-base00 = ee202124
-base01 = 27292c
-base02 = 323639
-base03 = 44464d
-base04 = 676c71
-base05 = 80868b
-base06 = 9e9e9e
-base07 = ffffff
-base08 = f44336
-base09 = ff9800
-base0A = ffeb3b
-base0B = 00e676
-base0C = 00bcd4
-base0D = 2196f3
-base0E = 673ab7
-base0F = 8d6e63
+base00 = ee190134
+base01 = 392551
+base02 = 5A496E
+base03 = 7B6D8B
+base04 = 9C92A8
+base05 = BDB6C5
+base06 = DEDAE2
+base07 = FEFFFF
+base08 = 27D9D5
+base09 = 5BA2B6
+base0A = 8F6C97
+base0B = C33678
+base0C = F80059
+base0D = BD0152
+base0E = 82034C
+base0F = 470546
 # End Flavours
 
 [bar/mainbar]
@@ -45,9 +45,9 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-1 = unifont:fontformat=truetype:size=10:antialias=false;1
 font-2 = siji:pixelsize=10;1
-font-3 = "FiraCode Nerd Font:pixelsize=14;1"
+font-3 = "FiraCode Nerd Font:pixelsize=12;1"
 
 modules-left = i3 filesystem date network mpris minicava
 modules-center = xwindow
@@ -97,9 +97,9 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = siji:pixelsize=10;1
-font-3 = "FiraCode Nerd Font:pixelsize=14;1"
+font-3 = "FiraCode Nerd Font:pixelsize=12;1"
 
 modules-left = i3 filesystem date network mpris minicava
 modules-center = xwindow 
@@ -233,13 +233,13 @@ exec = "gamemoded --status | grep 'is active' --quiet && echo ''"
 
 [module/ethminer]
 type = custom/script
-exec = "(systemctl --user is-active --quiet ethminer && journalctl --user -n 10 -u ethminer | grep -e '\ m\ .*' | cut -d ' ' -f12-13 | tail -1) || echo"
-interval = 3
+exec = "(systemctl --user is-active --quiet ethminer && echo ﲹ $(journalctl --user -n 10 -u ethminer | grep -e '\ m\ .*' | cut -d ' ' -f12-13 | tail -1)) || echo"
 format-underline = ${colors.base0E}
+click-right = systemctl --user stop ethminer
 
 [module/tray]
 type = custom/text
-content = "▲"
+content = ""
 click-left = ~/.scripts/polybar/traybar.sh
 click-right = ~/.scripts/polybar/kill-tray.sh
 
@@ -253,6 +253,7 @@ type = custom/script
 exec = ~/.scripts/gpunvidia/gpu.sh
 interval = 2
 format-underline = ${colors.base0E}
+click-right = systemctl --user start ethminer
 
 [module/bigcava]
 type = custom/script
@@ -348,7 +349,7 @@ label-song-ellipsis = true
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.base05}
 format-underline = #f90000
 label = %percentage:2%%
@@ -356,7 +357,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.base05}
 format-underline = #4bffdc
 label = %mb_used%
@@ -401,7 +402,7 @@ animation-packetloss-1-foreground = #000000
 animation-packetloss-framerate = 500
 format-connected-underline = #55aa55
 format-disconnected-underline = #000000
-format-connected-prefix = " "
+format-connected-prefix = "力 "
 format-connected-prefix-foreground = ${colors.base05}
 
 [module/date]
@@ -444,9 +445,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.base0F}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 ramp-foreground = ${colors.base05}
 
 #[module/powermenu]

@@ -10,21 +10,21 @@ configuration {
 
 /* Start flavours */
 /**
- * Base16 Material Vivid ROFI Color theme
+ * Base16 Heetch Dark ROFI Color theme
  *
  * Authors
- *  Scheme: joshyrobot
+ *  Scheme: Geoffrey Teale (tealeg@gmail.com)
  *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
  */
 
 * {
-    red:                         rgba ( 244, 67, 54, 100 % );
-    blue:                        rgba ( 33, 150, 243, 100 % );
-    lightfg:                     rgba ( 158, 158, 158, 100 % );
-    lightbg:                     rgba ( 39, 41, 44, 100 % );
-    foreground:                  rgba ( 128, 134, 139, 100 % );
-    background:                  rgba ( 32, 33, 36, 100 % );
-    background-color:            rgba ( 32, 33, 36, 0 % );
+    red:                         rgba ( 39, 217, 213, 100 % );
+    blue:                        rgba ( 189, 1, 82, 100 % );
+    lightfg:                     rgba ( 222, 218, 226, 100 % );
+    lightbg:                     rgba ( 57, 37, 81, 100 % );
+    foreground:                  rgba ( 189, 182, 197, 100 % );
+    background:                  rgba ( 25, 1, 52, 100 % );
+    background-color:            rgba ( 25, 1, 52, 0 % );
     separatorcolor:              @foreground;
     border-color:                @foreground;
     selected-normal-foreground:  @lightbg;
