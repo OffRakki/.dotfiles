@@ -1,0 +1,13 @@
+[Unit]
+Description="Ethminer"
+After=network-online.target nss-lookup.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=exec
+ExecStart=ethminer $ETHMINER_OPTS -P $ETHMINER_POOL
+Restart=always
+RestartSec=20
+
+[Install]
+WantedBy=default.target
