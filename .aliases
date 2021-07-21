@@ -51,7 +51,7 @@ alias supernova="mpv --no-video --loop ~/yt-downloads/From\ Fall\ to\ Spring\ -\
 alias gambare="mpv --ytdl --no-video 'https://www.youtube.com/watch?v=gnxNdYi69Zg'"
 
 # git
-alias gitall="git add * && git commit -a && git push"
+alias gitall="git add -A && git commit -a && git push"
 
 # misc
 alias nf="neofetch"
