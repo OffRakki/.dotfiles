@@ -50,7 +50,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 filesystem date network mpris minicava
 modules-center = xwindow
-modules-right = pacaur pulseaudio memory temperature cpu nvidia-gpu
+modules-right = ethminer pulseaudio memory temperature cpu nvidia-gpu
 ;tray-position = right
 ;tray-padding = 0
 ;tray-background = #0063ff
@@ -101,7 +101,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3 filesystem date network mpris minicava
 modules-center = xwindow 
-modules-right = pacaur pulseaudio memory temperature cpu nvidia-gpu tray
+modules-right = ethminer pulseaudio memory temperature cpu nvidia-gpu tray
 
 ;tray-position = right
 ;tray-padding = 2
@@ -224,6 +224,12 @@ override-redirect = true
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/ethminer]
+type = custom/script
+exec = "(systemctl --user is-active --quiet ethminer && journalctl --user -n 10 -u ethminer | grep -e '\ m\ .*' | cut -d ' ' -f12-13 | tail -1) || echo"
+interval = 3
+format-underline = ${colors.base0E}
 
 [module/tray]
 type = custom/text
