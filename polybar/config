@@ -44,10 +44,10 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
+font-0 = fixed:pixelsize=11;1
 font-1 = unifont:fontformat=truetype:size=10:antialias=false;1
 font-2 = siji:pixelsize=10;1
-font-3 = "FiraCode Nerd Font:pixelsize=12;1"
+font-3 = "FiraCode Nerd Font:pixelsize=13;1"
 
 modules-left = i3 filesystem date network mpris minicava
 modules-center = xwindow
@@ -425,11 +425,10 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume>
-label-volume = %{F#0a6cf5}%percentage%%
+label-volume = 墳  %percentage%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = muted
-label-muted-foreground = #684ddf
+label-muted = "婢"
 
 [module/temperature]
 type = internal/temperature
