@@ -229,13 +229,12 @@ cursor-scroll = ns-resize
 
 [module/gamemode]
 type = custom/script
-exec = "gamemoded --status | grep 'is active' --quiet && echo ''"
+exec = "gamemoded --status | grep 'is active' --quiet && echo '  '"
 
 [module/ethminer]
 type = custom/script
 exec = "(systemctl --user is-active --quiet ethminer && echo ﲹ $(journalctl --user -n 10 -u ethminer | grep -e '\ m\ .*' | cut -d ' ' -f12-13 | tail -1)) || echo"
 format-underline = ${colors.base0E}
-click-right = systemctl --user stop ethminer
 
 [module/tray]
 type = custom/text
@@ -253,7 +252,8 @@ type = custom/script
 exec = ~/.scripts/gpunvidia/gpu.sh
 interval = 2
 format-underline = ${colors.base0E}
-click-right = systemctl --user start ethminer
+click-left = systemctl --user start ethminer
+click-right = systemctl --user stop ethminer
 
 [module/bigcava]
 type = custom/script
@@ -402,7 +402,7 @@ animation-packetloss-1-foreground = #000000
 animation-packetloss-framerate = 500
 format-connected-underline = #55aa55
 format-disconnected-underline = #000000
-format-connected-prefix = "力 "
+format-connected-prefix = "力  "
 format-connected-prefix-foreground = ${colors.base05}
 
 [module/date]
@@ -415,7 +415,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M %a %d
 time-alt = %H:%M:%S %A
 
-format-prefix = 
+format-prefix = " "
 format-prefix-foreground = ${colors.base05}
 format-underline = #0a6cf5
 
@@ -443,7 +443,7 @@ format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.base0F}
+label-warn-foreground = ${colors.base0E}
 
 ramp-0 = 
 ramp-1 = 
