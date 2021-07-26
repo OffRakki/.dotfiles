@@ -83,7 +83,7 @@ zplug "dracula/zsh", as:theme
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-completions zsh-syntax-highlighting history-substring-search zsh_reload copyfile copydir)
+plugins=(git zsh-abbr zsh-autosuggestions zsh-completions zsh-syntax-highlighting history-substring-search zsh_reload copyfile copydir)
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh

@@ -5,8 +5,8 @@ alias badapple="cd ~/badapple && mpv --really-quiet --no-video ~/badapple/【東
 
 
 # mount-cel
-alias celmount="simple-mtpfs --device 1 ~/mount/"
-alias celumount="fusermount -u ~/mount/"
+#alias celmount="simple-mtpfs --device 1 ~/mount/"
+#alias celumount="fusermount -u ~/mount/"
 
 
 # nvim
@@ -68,9 +68,11 @@ alias localserver="~/.scripts/localserver/startlocalserver"
 
 # pac-aur
 alias pacsyu="sudo pacman -Syyu"
-alias yaysyu="yay -Syu"
-alias parusyu="paru Syu --noconfirm"
-alias paru="paru --skipreview"
+alias pasyu="paru -Syu --skipreview"
+## Upgrade AUR pkgs
+alias pasua="paru -Sua"
+## Print available AUR updates
+alias paqua="paru -Qua"
 
 
 # file management

@@ -1,0 +1,103 @@
+# abbrs
+
+# badapple
+abbr badapple="cd ~/badapple && mpv --really-quiet --no-video ~/badapple/【東方】Bad\ Apple\!\!\ ＰＶ【影絵】-FtutLA63Cp8.mkv | python2 ~/badapple/player.py bad_apple_wb.txt 30"
+
+
+# mount-cel
+#abbr celmount="simple-mtpfs --device 1 ~/mount/"
+#abbr celumount="fusermount -u ~/mount/"
+
+
+# nvim
+abbr vzsh="nvim ~/.zshrc"
+abbr nvzsh="neovide ~/.zshrc"
+abbr vi3="nvim ~/.i3/config"
+abbr nvi3="neovide ~/.i3/config"
+abbr vabbr="nvim ~/.abbres"
+abbr nvabbr="neovide ~/.abbres"
+abbr vim="nvim"
+abbr v="nvim"
+abbr nv="neovide"
+abbr vstar="nvim ~/.config/starship.toml"
+abbr vbkp="nvim ~/.scripts/backup/backup.sh"
+
+
+# cd
+abbr ..='cd ..'
+
+# youtube-dl
+abbr ytd="youtube-dl -o '~/yt-downloads/%(title)s.%(ext)s' "
+abbr yta-best="youtube-dl --extract-audio --audio-format best -o '~/yt-downloads/%(title)s.%(ext)s' "
+abbr yta-mp3="youtube-dl --extract-audio --audio-format mp3 -o '~/yt-downloads/%(title)s.%(ext)s' "
+abbr ytd-best="youtube-dl -f mp4+bestaudio -o '~/yt-downloads/%(title)s.%(ext)s' "
+
+# mpv
+abbr mpvs="~/.scripts/mpv/mpvs"
+abbr mpvsa="~/.scripts/mpv/mpvsa"
+
+# music
+abbr mpa="~/.scripts/mpv/mpa.sh"
+abbr lofi="mpv --ytdl-format=bestaudio ytdl://ytsearch:'www.youtube.com/watch?v=hGvWS1pLb3g'"
+abbr lofi2="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=zRRq4Rd1lPs'"
+abbr hype="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=MTahu17Cgc8'"
+abbr lucas20="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=fLpCyU_SHRo'"
+abbr lucas19="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=PhfXQ58ywuI'"
+abbr violin="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=iceS6BvhuQ8'"
+abbr violin2="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=synJbsrk0k8'"
+abbr villain="mpv --ytdl-format=bestaudio ytdl://ytsearch:'https://www.youtube.com/watch?v=le1l4eeo8Ow'"
+abbr bnha="mpv --no-video ~/Music/BNHA/*"
+abbr supernova="mpv --no-video --loop ~/yt-downloads/From\ Fall\ to\ Spring\ -\ Supernova\ \(Official\ Lyric\ Video\).opus"
+abbr gambare="mpv --ytdl --no-video 'https://www.youtube.com/watch?v=gnxNdYi69Zg'"
+
+# git
+abbr gitall="git add -A && git commit -a && git push"
+
+# misc
+abbr nf="neofetch"
+abbr pipes="pipes.sh -t 3 -f 100 -R -r 0"
+abbr htop="bpytop"
+abbr fw="feh --bg-scale -z ~/Pictures/Wallpapers/"
+abbr cat="bat"
+abbr suspend="i3exit suspend"
+abbr xclip="xclip -selection clipboard"
+abbr pudimcoin="wine64 ~/pudimcoin/pudimcoin.exe"
+abbr pudimmine="~/.scripts/pudim/pudim.sh"
+abbr localserver="~/.scripts/localserver/startlocalserver"
+
+
+# pac-aur
+abbr pacsyu="sudo pacman -Syyu"
+abbr pasyu="paru -Syu --skipreview"
+## Upgrade AUR pkgs
+abbr pasua="paru -Sua"
+## Print available AUR updates
+abbr paqua="paru -Qua"
+
+
+# file management
+abbr mv="mv -i"
+abbr rm='rm -i'
+abbr cp="cp -i"
+abbr df="df -h"
+abbr du="du -hc --time"
+abbr tree="tree --du -h"
+abbr ls="ls -FahsSL --color=always"
+abbr la="ls -A"
+#abbr ls="la --color=always"
+abbr exa="exa -lFs name --colour=always --colour-scale --group-directories-first"
+abbr rsync="rsync -h --progress --recursive --append"
+abbr fzf="fzf --color=16"
+abbr dragon="dragon-drag-and-drop"
+
+# grep
+abbr grep="grep --color=always"
+abbr egrep="egrep --color=always"
+abbr fgrep="fgrep --color=always"
+
+# ethereum
+abbr ethus="ethminer -U -R -P 'stratum1+tcp://0x37Cba5798f68684907CB917AFB9dcEbE73187137.mashiro@eth-us-east.flexpool.io:4444'"
+abbr ethbr="ethminer -U -R -P 'stratum1+tcp://0x37Cba5798f68684907CB917AFB9dcEbE73187137.mashiro@eth-br.flexpool.io:4444'"
+
+# bitwarden
+abbr bwgc=~/.scripts/bitwarden/xclip.sh
