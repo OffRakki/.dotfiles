@@ -11,7 +11,7 @@ export DISPLAY=:0.0
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
 
-neofetch
+neofetch --backend jp2a --source .config/alacritty/uwuarch/uwuarch.png
 
 source ~/.zplug/init.zsh
 

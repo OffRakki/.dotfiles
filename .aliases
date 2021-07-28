@@ -1,5 +1,9 @@
 # aliases
 
+# neofetch (uwufetch)
+alias neofetch="neofetch --backend jp2a --source .config/alacritty/uwuarch/uwuarch.png"
+alias nf="neofetch"
+
 # badapple
 alias badapple="cd ~/badapple && mpv --really-quiet --no-video ~/badapple/【東方】Bad\ Apple\!\!\ ＰＶ【影絵】-FtutLA63Cp8.mkv | python2 ~/badapple/player.py bad_apple_wb.txt 30"
 
@@ -54,7 +58,6 @@ alias gambare="mpv --ytdl --no-video 'https://www.youtube.com/watch?v=gnxNdYi69Z
 alias gitall="git add -A && git commit -a && git push"
 
 # misc
-alias nf="neofetch"
 alias pipes="pipes.sh -t 3 -f 100 -R -r 0"
 alias htop="bpytop"
 alias fw="feh --bg-scale -z ~/Pictures/Wallpapers/"

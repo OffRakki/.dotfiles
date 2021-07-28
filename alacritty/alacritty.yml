@@ -61,7 +61,7 @@ window:
        family: Fira Code
        style: Bold Italic
 
-     size: 14
+     size: 12
 
      padding:
         x: 10
