@@ -1,7 +1,7 @@
 # aliases
 
 # neofetch (uwufetch)
-alias neofetch="neofetch --backend jp2a --source .config/alacritty/uwuarch/uwuarch.png"
+alias neofetch="neofetch --backend jp2a --source ~/.config/alacritty/uwuarch/uwuarch.png"
 alias nf="neofetch"
 
 # badapple
