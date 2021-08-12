@@ -36,3 +36,14 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 5459, in process_keys
     os.kill(pid, sig)
 PermissionError: [Errno 1] Operation not permitted
+10/08/21 (21:38:18) | ERROR: Data collection thread failed with exception: Precision not allowed in integer format specifier
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 2939, in _runner
+    collector._draw()
+  File "/usr/bin/bpytop", line 3971, in _draw
+    ProcBox._draw_fg()
+  File "/usr/bin/bpytop", line 2751, in _draw_fg
+    (f'{proc.details["threads"]:^{iw}.{iw2}}' if expand > 0 else "") + (f'{proc.details["nice"]:^{iw}.{iw2}}' if expand > 1 else "") +
+ValueError: Precision not allowed in integer format specifier
+10/08/21 (21:38:18) | WARNING: Exiting with errorcode (1). Runtime 0:01:46 
+

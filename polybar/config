@@ -1,21 +1,21 @@
 # Start Flavours
 [colors]
-base00 = ee190134
-base01 = 392551
-base02 = 5A496E
-base03 = 7B6D8B
-base04 = 9C92A8
-base05 = BDB6C5
-base06 = DEDAE2
-base07 = FEFFFF
-base08 = 27D9D5
-base09 = 5BA2B6
-base0A = 8F6C97
-base0B = C33678
-base0C = F80059
-base0D = BD0152
-base0E = 82034C
-base0F = 470546
+base00 = ee19171c
+base01 = 26232a
+base02 = 585260
+base03 = 655f6d
+base04 = 7e7887
+base05 = 8b8792
+base06 = e2dfe7
+base07 = efecf4
+base08 = be4678
+base09 = aa573c
+base0A = a06e3b
+base0B = 2a9292
+base0C = 398bc6
+base0D = 576ddb
+base0E = 955ae7
+base0F = bf40bf
 # End Flavours
 
 [bar/mainbar]
@@ -320,23 +320,23 @@ wrapping-scroll = false
 pin-workspaces = true
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = ${colors.base02}
+label-focused = 綠  %index%
+label-focused-background = ${colors.base00}
 label-focused-underline = ${colors.base08}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = 祿  %index%
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = "綠  %index%"
 label-visible-background = ${colors.base00}
 label-visible-underline = ${colors.base0F}
 label-visible-padding = 2 
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = "綠  %index%"
 label-urgent-background = #a11b2a 
 label-urgent-padding = 2
 
