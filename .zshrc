@@ -11,6 +11,8 @@ export DISPLAY=:0.0
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
 
+export QT_QPA_PLATFORMTHEME=gtk2
+
 neofetch
 
 source ~/.zplug/init.zsh

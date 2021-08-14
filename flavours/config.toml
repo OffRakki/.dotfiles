@@ -65,6 +65,7 @@ file = "~/.themes/FlatColor/colors2"
 template = "gtk-flatcolor"
 subtemplate = "gtk-2"
 rewrite = true
+hook = "timeout 0.1 xsettingsd"
 
 [[item]]
 file = "~/.config/rofi/themes/uwuflavours.rasi"

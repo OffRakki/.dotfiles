@@ -1,30 +1,30 @@
 # Start Flavours
 [colors]
-base00 = ee19171c
-base01 = 26232a
-base02 = 585260
-base03 = 655f6d
-base04 = 7e7887
-base05 = 8b8792
-base06 = e2dfe7
-base07 = efecf4
-base08 = be4678
-base09 = aa573c
-base0A = a06e3b
-base0B = 2a9292
-base0C = 398bc6
-base0D = 576ddb
-base0E = 955ae7
-base0F = bf40bf
+base00 = ee241b26
+base01 = 2f2a3f
+base02 = 46354a
+base03 = 6c3cb2
+base04 = 7e5f83
+base05 = eed5d9
+base06 = d9c2c6
+base07 = e4ccd0
+base08 = 877bb6
+base09 = de5b44
+base0A = a84a73
+base0B = c965bf
+base0C = 9c5fce
+base0D = 6a9eb5
+base0E = 78a38f
+base0F = a3a079
 # End Flavours
 
 [bar/mainbar]
 monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
 fixed-center = true
 
 bottom = true
@@ -32,11 +32,11 @@ bottom = true
 background = ${colors.base00}
 foreground = ${colors.base05}
 
-line-size = 2
+line-size = 3
 line-color = #f00
 
-border-size = 4
-border-color = #00000000
+border-size = 1
+border-color = ${colors.base0B}
 
 padding-left = 0 
 padding-right = 2
@@ -73,10 +73,10 @@ cursor-scroll = ns-resize
 [bar/mainbar2]
 monitor = ${env:MONITOR:HDMI-0}
 width = 100%
-height = 27
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+radius = 0.0
 fixed-center = true
 
 bottom = true
@@ -87,8 +87,8 @@ foreground = ${colors.base05}
 line-size = 2
 line-color = #f00
 
-border-size = 4
-border-color = #00000000
+border-size = 1
+border-color = ${colors.base0B}
 
 padding-left = 0 
 padding-right = 2
@@ -103,11 +103,11 @@ font-3 = "FiraCode Nerd Font:pixelsize=12;1"
 
 modules-left = i3 filesystem date network mpris minicava
 modules-center = xwindow 
-modules-right = gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu tray
+modules-right = gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu
 
-;tray-position = right
-;tray-padding = 2
-;tray-background = #0063ff
+tray-position = right
+tray-padding = 2
+tray-background = ${colors.base00}
 
 ;wm-restack = bspwm
 wm-restack = i3
@@ -429,7 +429,7 @@ label-volume = 墳  %percentage%%
 label-volume-foreground = ${root.foreground}
 format-volume-underline = ${colors.base0B}
 
-label-muted = "婢"
+label-muted = "       婢       "
 
 [module/temperature]
 type = internal/temperature
