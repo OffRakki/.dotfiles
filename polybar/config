@@ -1,21 +1,21 @@
 # Start Flavours
 [colors]
-base00 = ee241b26
-base01 = 2f2a3f
-base02 = 46354a
-base03 = 6c3cb2
-base04 = 7e5f83
-base05 = eed5d9
-base06 = d9c2c6
-base07 = e4ccd0
-base08 = 877bb6
-base09 = de5b44
-base0A = a84a73
-base0B = c965bf
-base0C = 9c5fce
-base0D = 6a9eb5
-base0E = 78a38f
-base0F = a3a079
+base00 = ee16172d
+base01 = 1b1c36
+base02 = 30365F
+base03 = 686f9a
+base04 = 818596
+base05 = ecf0c1
+base06 = c1c3cc
+base07 = ffffff
+base08 = e33400
+base09 = e39400
+base0A = f2ce00
+base0B = 5ccc96
+base0C = 00a3cc
+base0D = 7a5ccc
+base0E = b3a1e6
+base0F = ce6f8f
 # End Flavours
 
 [bar/mainbar]
@@ -32,11 +32,11 @@ bottom = true
 background = ${colors.base00}
 foreground = ${colors.base05}
 
-line-size = 3
+line-size = 0
 line-color = #f00
 
-border-size = 1
-border-color = ${colors.base0B}
+border-size = 3
+border-color = ${colors.base02}
 
 padding-left = 0 
 padding-right = 2
@@ -49,12 +49,13 @@ font-1 = unifont:fontformat=truetype:size=10:antialias=false;1
 font-2 = siji:pixelsize=10;1
 font-3 = "FiraCode Nerd Font:pixelsize=13;1"
 
-modules-left = i3 filesystem date network mpris minicava
+modules-left = i3 filesystem network mpris minicava
 modules-center = xwindow
-modules-right = gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu
-;tray-position = right
-;tray-padding = 0
-;tray-background = #0063ff
+modules-right = gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu date
+
+#tray-position = right
+#tray-padding = 2
+#tray-background = ${colors.base00}
 
 ;wm-restack = bspwm
 wm-restack = i3
@@ -84,11 +85,11 @@ bottom = true
 background = ${colors.base00}
 foreground = ${colors.base05}
 
-line-size = 2
+line-size = 0
 line-color = #f00
 
-border-size = 1
-border-color = ${colors.base0B}
+border-size = 2 
+border-color = ${colors.base02}
 
 padding-left = 0 
 padding-right = 2
@@ -101,9 +102,9 @@ font-1 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = "FiraCode Nerd Font:pixelsize=12;1"
 
-modules-left = i3 filesystem date network mpris minicava
+modules-left = i3 filesystem network mpris minicava
 modules-center = xwindow 
-modules-right = gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu
+modules-right = gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu date
 
 tray-position = right
 tray-padding = 2
@@ -337,7 +338,7 @@ label-visible-padding = 2
 
 ; urgent = Workspace with urgency hint set
 label-urgent = "綠  %index%"
-label-urgent-background = #a11b2a 
+label-urgent-background = ${colors.base0C} 
 label-urgent-padding = 2
 
 ; Separator in between workspaces
@@ -416,8 +417,9 @@ time = %H:%M - %a - %d
 time-alt = %H:%M:%S %A
 
 format-prefix = " "
-format-prefix-foreground = ${colors.base05}
+format-prefix-foreground = ${colors.base0C}
 format-underline = #0a6cf5
+format-background = ${colors.base00}
 
 label = %date% %time%
 

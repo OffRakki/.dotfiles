@@ -46,6 +46,7 @@ template = 'polybar'
 [[item]]
 file = '~/.config/dunst/dunstrc'
 template = 'dunst'
+hook = "killall dunst"
 
 [[item]]
 file = "~/.config/nvim/colors/base16.vim"
