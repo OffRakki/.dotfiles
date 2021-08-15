@@ -12,21 +12,22 @@ disabled = false
 
 [username]
 show_always = true
+disabled = true
 style_user = "bold underline #7A5FEE"
-format = "[$user]($style)"
+format = "[$user]($style) in "
 
 [hostname]
 ssh_only = false
 disabled = false 
-style = "bold underline #c41b5c"
-format= "[@$hostname]($style) in "
+style = "bold #c41b5c"
+format= "[$hostname]($style) in "
 
 [cmd_duration]
 min_time = 0
 show_milliseconds = true
 disabled = false
 style = "bold #7A5FEE"
-format = " took [$duration]($style) "
+format = "took [$duration]($style) "
 
 [memory_usage]
 disabled = true 
