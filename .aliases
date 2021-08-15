@@ -4,6 +4,9 @@
 #alias neofetch="neofetch --backend jp2a --source ~/.config/alacritty/uwuarch/uwuarch.png"
 alias nf="neofetch"
 
+# fish
+alias src="source ~/.config/fish/config.fish"
+
 # badapple
 alias badapple="cd ~/badapple && mpv --really-quiet --no-video ~/badapple/【東方】Bad\ Apple\!\!\ ＰＶ【影絵】-FtutLA63Cp8.mkv | python2 ~/badapple/player.py bad_apple_wb.txt 30"
 
@@ -14,6 +17,8 @@ alias badapple="cd ~/badapple && mpv --really-quiet --no-video ~/badapple/【東
 
 
 # nvim
+alias vfish="nvim ~/.config/fish/config.fish"
+alias nvfish="neovide ~/.config/fish/config.fish"
 alias vzsh="nvim ~/.zshrc"
 alias nvzsh="neovide ~/.zshrc"
 alias vi3="nvim ~/.i3/config"

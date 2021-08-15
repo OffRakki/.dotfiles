@@ -6,7 +6,9 @@
 
 config_version: 2
 settings:
+  colors.webpage.preferred_color_scheme:
+    global: dark
   content.desktop_capture:
     https://discord.com: true
-  content.notifications:
+  content.notifications.enabled:
     https://web.whatsapp.com: false
