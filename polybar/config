@@ -32,7 +32,7 @@ bottom = true
 background = ${colors.base00}
 foreground = ${colors.base05}
 
-line-size = 0
+line-size = 3
 line-color = #f00
 
 border-top = 3
@@ -51,7 +51,7 @@ font-3 = FiraCode Nerd Font:pixelsize=13;1
 
 modules-left = i3 filesystem network mpris minicava
 modules-center = xwindow
-modules-right = gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu date
+modules-right = minemis gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu date
 
 #tray-position = right
 #tray-padding = 2
@@ -85,7 +85,7 @@ bottom = true
 background = ${colors.base00}
 foreground = ${colors.base05}
 
-line-size = 0
+line-size = 2
 line-color = #f00
 
 border-top = 3 
@@ -104,7 +104,7 @@ font-3 = FiraCode Nerd Font:pixelsize=12;1
 
 modules-left = i3 filesystem network mpris minicava
 modules-center = xwindow 
-modules-right = gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu date
+modules-right = minemis gamemode ethminer pulseaudio memory temperature cpu nvidia-gpu date
 
 tray-position = right
 tray-padding = 2
@@ -228,6 +228,13 @@ override-redirect = true
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+[module/minemis]
+type = custom/script
+exec = $HOME/.scripts/minemis/minemis
+click-left = notify-send $(mcstatus mc.misterio.me ping)
+click-right = telegram-cli -W -k -N server.pub -e "msg mis 'abre o server pora' && notify-send 'mensagem enviada'"
+tail = true
+
 [module/gamemode]
 type = custom/script
 exec = "gamemoded --status | grep 'is active' --quiet && echo '  '"
@@ -235,7 +242,7 @@ exec = "gamemoded --status | grep 'is active' --quiet && echo '  '"
 [module/ethminer]
 type = custom/script
 exec = "(systemctl --user is-active --quiet ethminer && echo ﲹ $(journalctl --user -n 10 -u ethminer | grep -e '\ m\ .*' | cut -d ' ' -f12-13 | tail -1)) || echo"
-format-underline = ${colors.base0E}
+;format-underline = ${colors.base0E}
 
 [module/tray]
 type = custom/text
@@ -252,7 +259,7 @@ click-left = polybar tray
 type = custom/script
 exec = ~/.scripts/gpunvidia/gpu.sh
 interval = 2
-format-underline = ${colors.base0E}
+;format-underline = ${colors.base0E}
 click-left = systemctl --user start ethminer
 click-right = systemctl --user stop ethminer
 
@@ -291,15 +298,15 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.base05}
-format-prefix-underline = ${colors.base0F}
+;format-prefix-underline = ${colors.base0F}
 
 label-layout = %layout%
-label-layout-underline = ${colors.base0F}
+;label-layout-underline = ${colors.base0F}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.base0F}
-label-indicator-underline = ${colors.base0F}
+;label-indicator-underline = ${colors.base0F}
 
 [module/filesystem]
 type = internal/fs
@@ -329,7 +336,7 @@ pin-workspaces = true
 label-focused = %index%
 label-focused-background = ${colors.base01}
 label-focused-foreground = ${colors.base0C}
-label-focused-underline = ${colors.base08}
+;label-focused-underline = ${colors.base08}
 label-focused-padding = 6
 
 ; unfocused = Inactive workspace on any monitor
@@ -340,7 +347,7 @@ label-unfocused-padding = 6
 label-visible = %index%
 label-visible-background = ${colors.base01}
 label-visible-foreground = ${colors.base0C}
-label-visible-underline = ${colors.base0F}
+;label-visible-underline = ${colors.base0F}
 label-visible-padding = 6 
 
 ; urgent = Workspace with urgency hint set
@@ -359,7 +366,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.base05}
-format-underline = #f90000
+;format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
@@ -367,11 +374,11 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.base05}
-format-underline = #4bffdc
+;format-underline = #4bffdc
 label = %mb_used%
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+#format-connected-underline = #9f78e1
 label-connected = %essid%
 
 format-disconnected =
@@ -395,7 +402,7 @@ interval = 0.5
 label-connected = %downspeed% | %upspeed%
 label-connected-foreground = ${colors.base05}
 label-disconnected = not connected
-label-disconnected-foreground = #66ffff
+;label-disconnected-foreground = #66ffff
 format-packetloss = <animation-packetloss> <label-connected>
 
 accumulate-stats = true 
@@ -408,8 +415,8 @@ animation-packetloss-1 = 📶
 animation-packetloss-1-foreground = #000000
 ; Framerate in milliseconds
 animation-packetloss-framerate = 500
-format-connected-underline = #55aa55
-format-disconnected-underline = #000000
+;format-connected-underline = #55aa55
+;format-disconnected-underline = #000000
 format-connected-prefix = "力  "
 format-connected-prefix-foreground = ${colors.base05}
 
@@ -425,7 +432,7 @@ time-alt = %H:%M:%S %A
 
 format-prefix = " "
 format-prefix-foreground = ${colors.base0C}
-format-underline = #0a6cf5
+format-underline = ${colors.base0C}
 format-background = ${colors.base00}
 
 label = %date% %time%
@@ -436,7 +443,7 @@ type = internal/pulseaudio
 format-volume = <label-volume>
 label-volume = 墳  %percentage%%
 label-volume-foreground = ${root.foreground}
-format-volume-underline = ${colors.base0B}
+;format-volume-underline = ${colors.base0B}
 
 label-muted = "       婢       "
 
@@ -446,9 +453,9 @@ thermal-zone = 2
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
+;format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
+;format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
