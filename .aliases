@@ -1,5 +1,8 @@
 # aliases
 
+# nix
+alias ncg="nix-collect-garbage"
+
 # sudo
 alias sv="sudo nvim"
 

@@ -6,6 +6,8 @@ export ZSH="/home/rakki/.oh-my-zsh"
 
 #export VOL1="${echo -e "\u+1f50a"}"
 
+source /etc/profile.d/nix{,-daemon}.sh
+
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
 

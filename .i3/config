@@ -49,7 +49,6 @@ set $kdeconnect $HOME/.scripts/kdeconnect/kdeconnect.sh
 set $keyboard sleep 2 && setxkbmap -layout us -variant intl -model pc105
 
 set $localserver $HOME/.scripts/localserver/startlocalserver 
-set $lolcard $HOME/.scripts/lol/card.sh
 
 set $mpvControl pactl set-sink-input-volume $($HOME/.scripts/mpv/mpvvolumecontrol.sh)
 set $micMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
@@ -106,9 +105,6 @@ bindsym $mod+Shift+f exec "kdeconnect-app"
 
 # Layout Teclado
 exec_always --no-startup-id $keyboard
-
-# lolcard
-#bindsym $alt+c exec sleep 0.5 && $lolcard
 
 # mod keys
 set $mod Mod4
