@@ -1,21 +1,21 @@
 # Start Flavours
-frame_color = "#8b9cbe"
-separator_color = "#8b9cbe"
+frame_color = "#eed5d9"
+separator_color = "#eed5d9"
 
 [base16_low]
     msg_urgency = low
-    background = "#22262d"
-    foreground = "#383a47"
+    background = "#2f2a3f"
+    foreground = "#6c3cb2"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#3c3f4c"
-    foreground = "#8b9cbe"
+    background = "#46354a"
+    foreground = "#eed5d9"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#ff29a8"
-    foreground = "#B2BFD9"
+    background = "#877bb6"
+    foreground = "#d9c2c6"
 # End Flavours
 
 [global]
@@ -95,7 +95,7 @@ separator_color = "#8b9cbe"
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "600x5-10+0"
+    geometry = "600x5-0+35"
     
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.

@@ -2,11 +2,18 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+bass source ~/.nix-profile/etc/profile.d/nix{,-daemon}.sh
+
 ## VARIABLES
 # Removes greeting message
 set -g fish_greeting
 # Vim keys
 #set -g fish_vi_key_bindings
+
+# Binds
+bind \e\[3\;5~ kill-word #ctrl+del
+bind \b backward-kill-word #ctrl+backspace
+
 
 #set -g fish_color_autosuggestion      brblack
 set -g fish_color_cancel              -r
