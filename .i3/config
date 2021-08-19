@@ -1,94 +1,168 @@
-# i3 config file (v4)
-# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# i3 config file /\ By Fernando Marques
 
 # Start Flavours
-## Base16 uwunicorn
-# Author: Fernando Marques (https://github.com/RakkiUwU)
+## Base16 UwUnicorn
+# Author: Fernando Marques (https://github.com/RakkiUwU) | Gabriel Fontes (https://github.com/Misterio77)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #1b1824
-set $base01 #f81118
-set $base02 #2b2436
-set $base03 #6126b5
-set $base04 #2a84d2
-set $base05 #734eb7
-set $base06 #1081d6
-set $base07 #d6dbe5
-set $base08 #d6dbe5
-set $base09 #de352e
-set $base0A #6e29c2
-set $base0B #9c0346
-set $base0C #6f2ac9
-set $base0D #6126b5
-set $base0E #a31c57
-set $base0F #ffffff
+set $base00 #241b26
+set $base01 #2f2a3f
+set $base02 #46354a
+set $base03 #6c3cb2
+set $base04 #7e5f83
+set $base05 #eed5d9
+set $base06 #d9c2c6
+set $base07 #e4ccd0
+set $base08 #877bb6
+set $base09 #de5b44
+set $base0A #a84a73
+set $base0B #c965bf
+set $base0C #9c5fce
+set $base0D #6a9eb5
+set $base0E #78a38f
+set $base0F #a3a079
 # End Flavours
 
-# __________________________________________________________________________________________
+# global variables___________________________________________________________________________
 
-set $lolcard $HOME/.scripts/lol/card.sh
-set $calc $HOME/.scripts/rofi/calc.sh
-set $polybar $HOME/.config/polybar/launch.sh
+set $animatedwallpaper $HOME/.scripts/xwinwrap/wallpaper-wrap
+set $animatedwallpapersound $HOME/.scripts/xwinwrap/wallpaper-wrap-sound
+set $animatedwallpaperselect $HOME/.scripts/xwinwrap/wallpaper-wrap-select-fzf
+set $animatedwallpaperselectsound $HOME/.scripts/xwinwrap/wallpaper-wrap-select-sound
+set $AudioToMic pactl move-source-output $($HOME/.scripts/mic/PCaudioMicDiscord) 1
+set $autoclicker $HOME/.scripts/autoclick/autoclick.sh
+
 set $backup $HOME/.scripts/backup/backup.sh
+
+set $calc alacritty -t "Octave" --class AlacrittyFloatingOctave --command octave
+
+set $escrotum $HOME/.scripts/escrotum/escrotum
+set $escrotumfreeze $HOME/.scripts/escrotum/escrotumfreeze
+
+set $FloatingTerminal alacritty -t "fish" --class AlacrittyFloatingOctave
+
+set $googledrive rclone --vfs-cache-mode full mount googledrive: ~/googledrive
+
+set $kaomoji $HOME/.scripts/rofi/kaomoji/kaomoji.sh
+set $kdeconnect $HOME/.scripts/kdeconnect/kdeconnect.sh
+set $keyboard sleep 2 && setxkbmap -layout us -variant intl -model pc105
+
+set $localserver $HOME/.scripts/localserver/startlocalserver 
+set $lolcard $HOME/.scripts/lol/card.sh
+
+set $mpvControl pactl set-sink-input-volume $($HOME/.scripts/mpv/mpvvolumecontrol.sh)
+set $micMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+set $NormalMic pactl move-source-output $($HOME/.scripts/mic/PCaudioMicDiscord) 4
+
+set $polybar $HOME/.config/polybar/launch.sh
+set $progsync $HOME/.scripts/programbkp/programsync.sh
+
+set $resolution xrandr --output HDMI-1 --mode "1920x1080"
 set $rofi $HOME/.scripts/rofi/run.sh
 set $rofitab $HOME/.scripts/rofi/alttab.sh
-set $wallpaper $HOME/.scripts/wallpaper/feh.sh
-set $kdeconnect $HOME/.scripts/kdeconnect/kdeconnect.sh
-set $kaomoji $HOME/.scripts/rofi/kaomoji/kaomoji.sh
-set $onedrive rclone --vfs-cache-mode writes mount onedrive: ~/onedrive
-set $mpvControl pactl set-sink-input-volume $(~/.scripts/mpv/mpvvolumecontrol.sh)
+
+set $screenrecord screencast -S -n -r 60 -o ~/Videos/screencast -u
 set $soundoutput1 pactl set-default-sink alsa_output.usb-Logitech_Logitech_G633_Gaming_Headset_00000000-00.analog-stereo
 set $soundoutput2 pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo
 set $soundoutput3 pactl set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo
-set $volume pactl set-sink-volume @DEFAULT_SINK@
-set $volMute pactl set-sink-mute @DEFAULT_SINK@ toggle
-set $micMute pactl set-source-mute @DEFAULT_SOURCE@ toggle
-set $resolution xrandr --output HDMI-1 --mode "1920x1080"
-set $keyboard sleep 2 && setxkbmap -layout us -variant intl -model pc105
 set $ssh sudo systemctl start sshd
-set $progsync $HOME/.scripts/programbkp/programsync.sh
-set $screenrecord screencast -S -n -r 60 -o ~/Videos/screencast -u
+
+set $volMute pactl set-sink-mute @DEFAULT_SINK@ toggle
+set $volume pactl set-sink-volume @DEFAULT_SINK@
+
+set $wallpaper $HOME/.scripts/wallpaper/feh.sh
+
 # __________________________________________________________________________________________
+
+# Autoclicker
+bindsym $mod+Ctrl+Shift+a exec --no-startup-id $autoclicker
+
+# Backup
+exec_always --no-startup-id $backup 
+
+# browser
+bindsym $mod+F2 exec google-chrome-stable 
+
+# Boot lockscreen
+##exec --no-startup-id "sleep 1 && i3lockboot"
+
+# dunst (notify)
+exec_always killall dunst
+
+# file manager
+bindsym $mod+Shift+e exec "nautilus"
+
+# Floating Octave (Calc)
+bindsym $mod+c exec --no-startup-id $calc
 
 # flavours
 bindsym $mod+Ctrl+f exec "flavours apply"
 
-# plastic memories <3
-bindsym Ctrl+p exec sleep 0.3 && xdotool type "i hope one day you'll be reunited with the one you cherish."
+# kde-connect
+exec --no-startup-id $kdeconnect 
+bindsym $mod+Shift+f exec "kdeconnect-app"
+
+# Layout Teclado
+exec_always --no-startup-id $keyboard
 
 # lolcard
 #bindsym $alt+c exec sleep 0.5 && $lolcard
 
-# programing sync
-exec --no-startup-id $progsync
-
-# Start ssh
-exec --no-startup-id $ssh
-
-# Start polybar
-exec_always --no-startup-id $polybar
-bindsym $mod+Ctrl+Shift+p exec --no-startup-id $polybar
-
-# Start onedrive
-exec_always --no-startup-id $onedrive
-
-# dunst (notify)
-exec_always --no-startup-id killall dunst; dunst &
-
-# Screenshot & Screen record
-bindsym Print exec --no-startup-id "flameshot gui"
-bindsym Ctrl+Shift+1 exec --no-startup-id "flameshot screen -n 1 -c"
-bindsym Ctrl+Shift+2 exec --no-startup-id "flameshot screen -n 0 -c"
-bindsym Ctrl+Print exec --no-startup-id "flameshot full -c -p ~/Pictures/prints"
-bindsym Ctrl+Shift+Print exec --no-startup-id alacritty -e $screenrecord
+# mod keys
+set $mod Mod4
+set $alt Mod1
 
 # mpv volume control
 bindsym $mod+Shift+equal exec $mpvControl +2%
 bindsym $mod+Shift+minus exec $mpvControl -2%
 
-# Backup
-exec_always --no-startup-id $backup 
+# power actions
+bindsym $mod+0 exec --no-startup-id "power"
+bindsym $mod+Ctrl+l exec "i3lock.sh"
+bindsym XF86Sleep exec "i3exit suspend"
+
+# programing sync
+#exec --no-startup-id $progsync
+
+# rofi
+bindsym $mod+d exec --no-startup-id $rofi 
+# rofi twitch
+bindsym $mod+t exec --no-startup-id kpl
+# rofi kaomoji
+bindsym $mod+Ctrl+k exec --no-startup-id $kaomoji
+# rofi tabs
+bindsym $alt+Tab exec --no-startup-id $rofitab
+
+# Screenshot & Screen record
+bindsym Print exec --no-startup-id $escrotum
+bindsym Shift+Print exec --no-startup-id $escrotumfreeze
+#bindsym Ctrl+Shift+1 exec --no-startup-id "flameshot screen -n 1 -c"
+#bindsym Ctrl+Shift+2 exec --no-startup-id "flameshot screen -n 0 -c"
+#bindsym Ctrl+Print exec --no-startup-id "flameshot full -c -p ~/Pictures/prints"
+#bindsym Ctrl+Shift+Print exec --no-startup-id alacritty -e $screenrecord
+
+# start a terminal
+bindsym $mod+Return exec alacritty
+# Floating Terminal
+bindsym $mod+Shift+Return exec $FloatingTerminal
+
+# Start googledrive
+##exec --no-startup-id $googledrive
+
+# start localserver
+#exec_always --no-startup-id $localserver
+
+# Start polybar
+exec_always --no-startup-id $polybar
+bindsym $mod+Ctrl+Shift+p exec --no-startup-id $polybar
+
+# Start ssh
+#exec --no-startup-id $ssh
+
+# udiskie (auto mount USB)
+exec --no-startup-id "udiskie -t"
 
 # volume geral
 bindsym Shift+XF86AudioMute exec $soundoutput1
@@ -102,50 +176,39 @@ bindsym XF86AudioRaiseVolume exec $volume +2%
 bindsym XF86AudioLowerVolume exec $volume -2%
 bindsym XF86AudioMute exec $volMute
 bindsym Ctrl+m exec $micMute
+# pactl mic
+bindsym $alt+Ctrl+a exec $AudioToMic && notify-send "PC audio sent to mic"
+bindsym $alt+Shift+a exec $NormalMic && notify-send "Normal mic"
 
 bindsym $mod+Ctrl+m exec "pavucontrol"
-
-# kde-connect
-exec_always --no-startup-id $kdeconnect 
-bindsym $mod+Shift+f exec "kdeconnect-app"
-
-# rofi
-bindsym $mod+d exec --no-startup-id $rofi 
-# rofi calc
-bindsym $mod+c exec --no-startup-id $calc
-# rofi twitch
-bindsym $mod+t exec --no-startup-id kpl
-# rofi kaomoji
-bindsym $mod+Ctrl+k exec --no-startup-id $kaomoji
-# rofi tabs
-bindsym $alt+Tab exec --no-startup-id $rofitab
-
-# Picom
-exec_always killall picom; picom
-
-# Resolution
-exec $resolution --primary --pos 1920x130
-exec $resolution
+bindsym $mod+Ctrl+Shift+m exec "pulseeffects"
 
 # Wallpaper
-exec_always --no-startup-id $wallpaper 
+exec --no-startup-id $wallpaper 
+bindsym $alt+Shift+w exec $wallpaper
+# Animated
+#exec --no-startup-id sleep 2 && $animatedwallpaper
+#exec --no-startup-id sleep 3 && $animatedwallpapersound
+bindsym $alt+Ctrl+w exec --no-startup-id $animatedwallpaperselect
+bindsym $alt+Ctrl+s exec --no-startup-id $animatedwallpaperselectsound
 
-# Layout Teclado
-exec_always --no-startup-id $keyboard
+# Picom
+exec picom
+bindsym $mod+Shift+p exec killall picom
+bindsym $mod+Ctrl+p exec picom
 
-# file manager
-bindsym $mod+Shift+e exec "nautilus"
-# ======================================================================================== #
+# ftp
+bindsym $mod+F3 exec krusader 
 
-# Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4
-set $Alt Mod1
+# xkill
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1 
+
+default_border pixel 2 
 default_floating_border normal
 
 # Hide borders
@@ -153,7 +216,7 @@ default_floating_border normal
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 1 
+bindsym $mod+y border pixel +1 
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -163,14 +226,8 @@ font xft:URWGothic-Book 11
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec alacritty -e zsh
-
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start program launcher
-bindsym $mod+Shift+d exec --no-startup-id dmenu_run -l 15 -fn FiraCode -p UwU
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -179,23 +236,13 @@ bindsym $mod+z exec --no-startup-id morc_menu
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
 
-# Start Applications
-bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec qutebrowser 
-bindsym $mod+F3 exec krusader 
-# bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
-bindsym $mod+F5 exec terminal -e 'mocp'
-#bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-
 #focus_follows_mouse no
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+#bindsym $mod+h focus left
+#bindsym $mod+j focus down
+#bindsym $mod+k focus up
+#bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -204,10 +251,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+#bindsym $mod+Shift+h move left
+#bindsym $mod+Shift+j move down
+#bindsym $mod+Shift+k move up
+#bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -216,21 +263,21 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
-workspace_auto_back_and_forth yes
+#workspace_auto_back_and_forth yes
 #bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+b split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+#bindsym $mod+b split h;exec notify-send 'tile horizontally'
+#bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -260,14 +307,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:UwU1 
-set $ws2 2:UwU2
-set $ws3 3:UwU3
-set $ws4 4:UwU4
-set $ws5 5:UwU5
-set $ws6 6:UwU6
-set $ws7 7:UwU7
-set $ws8 8:UwU8
+set $ws1 1:1 
+set $ws2 2:2
+set $ws3 3:3
+set $ws4 4:4
+set $ws5 5:5
+set $ws6 6:6
+set $ws7 7:7
+set $ws8 8:8
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -300,41 +347,35 @@ bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
-assign [class="spotify"] $ws4
-assign [class="mpv"] $ws4
+#assign [class="mpv"] $ws4
+#assign [title="pygame window"] $ws3
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
-for_window [class="calamares"] floating enable border normal
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
-for_window [class="fpakman"] floating enable
-for_window [class="Galculator"] floating enable border pixel 1
+for_window [title="GWE*"] floating enable
+for_window [title="NVIDIA X Server Settings"] floating enable
 for_window [class="GParted"] floating enable border normal
 for_window [title="i3_help"] floating enable sticky enable border normal
-for_window [class="Lightdm-settings"] floating enable
+for_window [instance="AlacrittyFloatingSelector"] floating enable, resize set 500 100, move position center
+for_window [instance="AlacrittyFloatingPower"] floating enable, resize set 500 150, move position center
+for_window [instance="AlacrittyFloatingOctave"] floating enable
+for_window [title="Steam Guard - Computer Authorization Required"] floating enable
+for_window [title="Raindrop.io*"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
-for_window [class="Manjaro-hello"] floating enable
-for_window [class="Manjaro Settings Manager"] floating enable border normal
-for_window [title="MuseScore: Play Panel"] floating enable
 for_window [class="Nitrogen"] floating enable sticky enable border normal
-for_window [class="Oblogout"] fullscreen enable
-for_window [class="octopi"] floating enable
-for_window [title="About Pale Moon"] floating enable
-for_window [class="Pamac-manager"] floating enable
 for_window [class="Pavucontrol"] floating enable
-for_window [class="qt5ct"] floating enable sticky enable border normal
-for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
-for_window [class="Simple-scan"] floating enable border normal
-for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
-for_window [class="Timeset-gui"] floating enable border normal
+for_window [title="PulseEffects"] floating enable
 for_window [class="(?i)virtualbox"] floating enable border normal
-for_window [class="Xfburn"] floating enable
-for_window [class="Pudimcoin Core"] floating enable
+for_window [title="Pudimcoin Core - Carteira"] floating enable
+for_window [title="Upload*"] floating enable
+for_window [instance="origin.exe"] move scratchpad
+for_window [title="Origin"] move scratchpad
+
 
 # switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
+for_window [urgent=latest] urgent
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -343,21 +384,21 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
-
-    # exit system mode: "Enter" or "Escape"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
+#bindsym $mod+0 mode "$mode_system"
+#set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+#mode "$mode_system" {
+#    bindsym l exec --no-startup-id i3exit lock, mode "default"
+#    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+#    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+#    bindsym e exec --no-startup-id i3exit logout, mode "default"
+#    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+#    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+#    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+#
+#    # exit system mode: "Enter" or "Escape"
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+#}
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
@@ -384,23 +425,13 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+9 exec --no-startup-id /usr/bin/i3lock.sh
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-#exec --no-startup-id nitrogen --restore; sleep 1; picom -b
-#exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-#exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 30 -locker blurlock
-exec_always --no-startup-id ff-theme-util
-exec_always --no-startup-id fix_xcursor
+exec --no-startup-id xautolock -time 30 -locker i3lock.sh
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -433,10 +464,6 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
 	bindsym button4 nop
 	bindsym button5 nop
 #   font xft:URWGothic-Book 11
@@ -446,11 +473,10 @@ set_from_resource $term_color15    color15
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          $base05 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #aaaaaa #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+client.focused           $base0B $base00 $base05 $base09 $base0B
+client.unfocused         $base02 $base00 $base04 $base02 $base02
+client.focused_inactive  $base01 $base00 $base04 $base01 $base01
+client.urgent            $base0C $base00 $base04 $base0C $base0C
 
   client.background       #2B2C2B
 
@@ -459,9 +485,10 @@ set_from_resource $term_color15    color15
 #############################
 
 # Set inner/outer gaps
-gaps inner 4
-gaps outer 0 
+gaps inner 8
+gaps outer 12 
 gaps top 32
+gaps bottom 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -473,7 +500,7 @@ gaps top 32
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace) 
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-smart_borders on
+# smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
