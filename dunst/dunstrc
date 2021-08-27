@@ -1,21 +1,21 @@
 # Start Flavours
-frame_color = "#ecf0c1"
-separator_color = "#ecf0c1"
+frame_color = "#8b9cbe"
+separator_color = "#8b9cbe"
 
 [base16_low]
     msg_urgency = low
-    background = "#1b1c36"
-    foreground = "#686f9a"
+    background = "#22262d"
+    foreground = "#383a47"
 
 [base16_normal]
     msg_urgency = normal
-    background = "#30365F"
-    foreground = "#ecf0c1"
+    background = "#3c3f4c"
+    foreground = "#8b9cbe"
 
 [base16_critical]
     msg_urgency = critical
-    background = "#e33400"
-    foreground = "#c1c3cc"
+    background = "#ff29a8"
+    foreground = "#B2BFD9"
 # End Flavours
 
 [global]
