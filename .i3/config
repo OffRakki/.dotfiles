@@ -93,6 +93,9 @@ exec_always killall dunst
 # file manager
 bindsym $mod+Shift+e exec "nautilus"
 
+# Floating bpytop
+bindcode Ctrl+Shift+9 exec alacritty -t "bpytop" --class AlacrittyFloatingOctave --command bpytop
+
 # Floating Octave (Calc)
 bindsym $mod+c exec --no-startup-id $calc
 
