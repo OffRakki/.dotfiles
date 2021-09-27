@@ -114,4 +114,4 @@ alias ethus="ethminer -U -R -P 'stratum1+tcp://0x37Cba5798f68684907CB917AFB9dcEb
 alias ethbr="ethminer -U -R -P 'stratum1+tcp://0x37Cba5798f68684907CB917AFB9dcEbE73187137.mashiro@eth-br.flexpool.io:4444'"
 
 # bitwarden
-alias bwgc=~/.scripts/bitwarden/xclip.sh
+alias bwp=~/.scripts/bitwarden/bitpass

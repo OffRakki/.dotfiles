@@ -1,27 +1,27 @@
 # i3 config file /\ By Fernando Marques
 
 # Start Flavours
-## Base16 vice
-# Author: Thomas Leon Highbaugh thighbaugh@zoho.com
+## Base16 Spaceduck
+# Author: Guillermo Rodriguez (https://github.com/pineapplegiant), packaged by Gabriel Fontes (https://github.com/Misterio77)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #17191E
-set $base01 #22262d
-set $base02 #3c3f4c
-set $base03 #383a47
-set $base04 #555e70
-set $base05 #8b9cbe
-set $base06 #B2BFD9
-set $base07 #f4f4f7
-set $base08 #ff29a8
-set $base09 #85ffe0
-set $base0A #f0ffaa
-set $base0B #0badff
-set $base0C #8265ff
-set $base0D #00eaff
-set $base0E #00f6d9
-set $base0F #ff3d81
+set $base00 #16172d
+set $base01 #1b1c36
+set $base02 #30365F
+set $base03 #686f9a
+set $base04 #818596
+set $base05 #ecf0c1
+set $base06 #c1c3cc
+set $base07 #ffffff
+set $base08 #e33400
+set $base09 #e39400
+set $base0A #f2ce00
+set $base0B #5ccc96
+set $base0C #00a3cc
+set $base0D #7a5ccc
+set $base0E #b3a1e6
+set $base0F #ce6f8f
 # End Flavours
 
 # global variables___________________________________________________________________________
@@ -60,7 +60,6 @@ set $progsync $HOME/.scripts/programbkp/programsync.sh
 
 set $resolution xrandr --output HDMI-1 --mode "1920x1080"
 set $rofi $HOME/.scripts/rofi/run.sh
-set $rofitab $HOME/.scripts/rofi/alttab.sh
 
 set $screenrecord screencast -S -n -r 60 -o ~/Videos/screencast -u
 set $soundoutput1 pactl set-default-sink alsa_output.usb-Logitech_Logitech_G633_Gaming_Headset_00000000-00.analog-stereo
@@ -131,8 +130,6 @@ bindsym $mod+d exec --no-startup-id $rofi
 bindsym $mod+t exec --no-startup-id kpl
 # rofi kaomoji
 bindsym $mod+Ctrl+k exec --no-startup-id $kaomoji
-# rofi tabs
-bindsym $alt+Tab exec --no-startup-id $rofitab
 
 # Screenshot & Screen record
 bindsym Print exec --no-startup-id $escrotum
@@ -140,7 +137,7 @@ bindsym Shift+Print exec --no-startup-id flameshot gui
 #bindsym Ctrl+Shift+1 exec --no-startup-id "flameshot screen -n 1 -c"
 #bindsym Ctrl+Shift+2 exec --no-startup-id "flameshot screen -n 0 -c"
 #bindsym Ctrl+Print exec --no-startup-id "flameshot full -c -p ~/Pictures/prints"
-#bindsym Ctrl+Shift+Print exec --no-startup-id alacritty -e $screenrecord
+bindsym Ctrl+Shift+Print exec --no-startup-id alacritty -e $screenrecord
 
 # start a terminal
 bindsym $mod+Return exec alacritty
@@ -314,6 +311,7 @@ set $ws5 5:5
 set $ws6 6:6
 set $ws7 7:7
 set $ws8 8:8
+set $ws9 9:9
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -324,6 +322,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # Move focused container to workspace
 bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -334,6 +333,7 @@ bindsym $mod+Ctrl+5 move container to workspace $ws5
 bindsym $mod+Ctrl+6 move container to workspace $ws6
 bindsym $mod+Ctrl+7 move container to workspace $ws7
 bindsym $mod+Ctrl+8 move container to workspace $ws8
+bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -344,6 +344,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 # Open applications on specific workspaces
 #assign [class="mpv"] $ws4
@@ -353,6 +354,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
+for_window [title="*event started"] floating enable
 for_window [title="GWE*"] floating enable
 for_window [title="NVIDIA X Server Settings"] floating enable
 for_window [class="GParted"] floating enable border normal
@@ -424,7 +426,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id /usr/bin/i3lock.sh
+bindsym $mod+l exec --no-startup-id /usr/bin/i3lock.sh
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
